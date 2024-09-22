@@ -1,4 +1,4 @@
-# Spicetify edited text theme
+# Spicetify "text" theme edit
 ## Important
 This is an edited version of [darkthemer](https://github.com/darkthemer)'s [text theme](https://github.com/darkthemer/spicetify-themes/tree/master/text) for [Spicetify](https://spicetify.app/), so all credits go to them.
 
