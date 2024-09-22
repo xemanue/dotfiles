@@ -1,5 +1,5 @@
 # Spicetify edited text theme
-## Disclaimer
+## Important
 This is an edited version of [darkthemer](https://github.com/darkthemer)'s [text theme](https://github.com/darkthemer/spicetify-themes/tree/master/text) for [Spicetify](https://spicetify.app/), so all credits go to them.
 
 Most changes are a matter of personal preference, but I also fixed some minor bugs I encountered while using Spotify `1.2.22.982`.
