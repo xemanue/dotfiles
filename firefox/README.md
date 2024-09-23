@@ -9,5 +9,5 @@ Configuration based on [ranmaru22](https://codeberg.org/ranmaru22)'s, so all cre
 4. Install [Sidebery](https://addons.mozilla.org/en-US/firefox/addon/sidebery/) allowing it to run in private windows.
 5. In Sidebery's settings, go to `Help > Import addon data` and choose `sb_settings.json`.
 6. Go to `Styles editor` and paste the contents of `sb_style.css`.
-7. Restart Firefox.
+7. Restart Firefox.\
 The sidebar can sometimes not show up under some circumstances. The default keybind to toggle it is `F1`.
