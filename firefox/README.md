@@ -10,4 +10,4 @@ Configuration based on [ranmaru22](https://codeberg.org/ranmaru22)'s, so all cre
 5. In Sidebery's settings, go to `Help > Import addon data` and choose `sidebery.json`. **Warning: This will import both my settings and my "style"**. Some settings could break the sidebar's appearance, so change them at your own risk.
 6. Restart Firefox.
 
-The sidebar can sometimes not show up under some circumstances. The default keybind to toggle it is `F1`.
+The sidebar can sometimes not show up under some circumstances. The default keybind to toggle it is `Ctrl + E`.
