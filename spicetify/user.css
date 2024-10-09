@@ -37,10 +37,10 @@
     --font-family-header: "asciid";
     --font-size-multiplier-header: 4;
 
-    --display-card-image: none; /* none | block */
-    --display-coverart-image: none; /* none | block */
+    --display-card-image: block; /* none | block */ /* album art */
+    --display-coverart-image: none; /* none | block */ /* playing album art */
     --display-header-image: none; /* none | block */
-    --display-library-image: none; /* none | block */
+    --display-library-image: none; /* none | block */ /* profile pics */
     --display-tracklist-image: none; /* none | block */
     --display-spicetify-banner-ascii: block; /* none | block */
     --display-music-banner-ascii: none; /* none | block */
@@ -785,6 +785,7 @@
 .view-homeShortcutsGrid-shortcut,
 .BoxComponent-group-tinted-listRow-isInteractive-minBlockSize_32px-padding_4px_8px::after,
 .BoxComponent-group-tinted-listRow-isInteractive-hasLeadingOrMedia-minBlockSize_32px-padding_4px_8px::after,
-.main-trackList-trackListRow {
+.main-trackList-trackListRow,
+.x-toggle-indicatorWrapper {
     border-radius: var(--border-radius);
 }
