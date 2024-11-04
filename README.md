@@ -1,4 +1,5 @@
 # xemanue's dotfiles
-This is a collection of config files for some of the programs I use, meant to make a new installation much easier.
+This is a collection of configuration files for some of the programs I use.
+The purpose of this repo is to keep my configs organized and to make new installations much easier.
 
-Each program will have its own README with basic instructions on how to install, as well as giving credit when needed.
+Everything included is only guaranteed to work in my setup. You are free to copy and modify these files to make them work in yours.
