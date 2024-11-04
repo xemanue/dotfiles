@@ -1,0 +1,91 @@
+@import "mocha.css";
+
+* {
+	font-size: 18px;
+	font-family: JetBrainsMono NF SemiBold;
+}
+
+window#waybar {
+	color: @text;
+    background: @mantle;
+}
+
+#custom-right-arrow-dark,
+#custom-left-arrow-dark {
+	font-size: 24px;
+    color: @base;
+}
+#custom-right-arrow-light,
+#custom-left-arrow-light {
+	font-size: 24px;
+    color: @mantle;
+	background: @base;
+}
+
+#workspaces,
+#tray,
+#keyboard-state,
+#pulseaudio,
+#backlight,
+#cpu,
+#memory,
+#disk,
+#battery,
+#clock {
+	background: @base;
+}
+
+#workspaces button {
+	padding: 0px 4px;
+	color: @text;
+}
+#workspaces button:nth-child(1) {
+    padding-left: 9px;
+}
+#workspaces button.focused {
+	color: @mauve;
+}
+
+#workspaces button:hover {
+    background: none;
+    border-color: @base;
+    box-shadow: none;
+	text-shadow: none;
+}
+
+#keyboard-state {
+    color: @text;
+}
+#pulseaudio,
+#backlight {
+	color: @rosewater;
+}
+#cpu,
+#memory,
+#disk {
+	color: @flamingo;
+}
+#battery {
+	color: @pink;
+}
+#clock {
+    color: @mauve;
+}
+
+#pulseaudio,
+#backlight,
+#cpu,
+#memory,
+#disk,
+#battery,
+#clock {
+	padding: 0px 10px 0px 8px;
+}
+
+#tray {
+	padding: 0px 8px 0px 6px;
+}
+
+#keyboard-state {
+	padding: 0px 10px 0px 6px;
+}

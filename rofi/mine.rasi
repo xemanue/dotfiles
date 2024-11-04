@@ -1,0 +1,68 @@
+* {
+    bg-col:  #1e1e2e;
+    border-col: #181825;
+    selected-col: #313244;
+    mauve: #cba6f7;
+    fg-col: #cdd6f4;
+    fg-col2: #6c7086;
+    grey: #6c7086;
+
+    width: 500;
+    font: "JetBrainsMono NF SemiBold 13";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    height: 228px;
+    border: 2px;
+    border-color: @border-col;
+    background-color: @bg-col;
+}
+
+mainbox {
+    background-color: @bg-col;
+}
+
+inputbar {
+    children: [prompt, entry];
+    background-color: @bg-col;
+    border-radius: 0px;
+    padding: 0px;
+}
+
+prompt {
+    background-color: @bg-col;
+    padding: 0px;
+    text-color: @mauve;
+    border-radius: 0px;
+    margin: 10px 0px 0px 10px;
+}
+
+entry {
+    padding: 0px;
+    margin: 10px 0px 0px 0px;
+    text-color: @fg-col;
+    background-color: @bg-col;
+}
+
+listview {
+    margin: 10px 0px 0px 0px;
+    columns: 1;
+    lines: 5;
+    background-color: @bg-col;
+}
+
+element {
+    padding: 5px 0px 5px 10px;
+    background-color: @bg-col;
+    text-color: @fg-col2;
+}
+
+element selected {
+    background-color: @selected-col;
+    text-color: @fg-col;
+}

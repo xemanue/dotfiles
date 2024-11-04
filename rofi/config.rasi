@@ -9,4 +9,4 @@ configuration{
     sidebar-mode: false;
 }
 
-@theme "catppuccin-mocha"
+@theme "~/.config/rofi/mine"
