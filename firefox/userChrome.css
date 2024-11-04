@@ -25,13 +25,14 @@
     }
 }
 
+#sidebar-splitter {
+    visibility: collapse !important
+}
+
+
 /* Linux/GTK specific styles */
-@media (-moz-gtk-csd-available), (-moz-platform: linux) {
 
-    #sidebar-splitter {
-        visibility: collapse !important
-    }
-
+    @media (-moz-gtk-csd-available), (-moz-platform: linux) {
     .titlebar-close {
         display: none !important
     }
