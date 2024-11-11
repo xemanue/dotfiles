@@ -15,13 +15,14 @@ o.expandtab = true
 
 -- Line wrap
 o.wrap = true
+o.linebreak = true
 
 -- Search
 o.hlsearch = true
 o.incsearch = true
 
 -- Scrolloff
-o.scrolloff = 3
+o.scrolloff = 2
 
 -- Clipboard
 vim.cmd("set clipboard+=unnamedplus")

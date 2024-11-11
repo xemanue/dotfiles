@@ -1,0 +1,156 @@
+// -*- mode: json -*-
+
+{
+	"layer": "top",
+	"position": "top",
+
+	"modules-left": [
+		"hyprland/workspaces",
+		"custom/right-arrow-dark"
+	],
+	"modules-right": [
+		"custom/left-arrow-dark",
+		"keyboard-state",
+		"custom/left-arrow-light",
+        "custom/left-arrow-dark",
+		"pulseaudio",
+		"custom/left-arrow-light",
+        "custom/left-arrow-dark",
+		"backlight",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+        "network",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"cpu",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"memory",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+		"disk",
+		"custom/left-arrow-light",
+        "custom/left-arrow-dark",
+		"battery",
+		"custom/left-arrow-light",
+		"custom/left-arrow-dark",
+        "clock"
+	],
+
+	"custom/left-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/left-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-dark": {
+		"format": "",
+		"tooltip": false
+	},
+	"custom/right-arrow-light": {
+		"format": "",
+		"tooltip": false
+	},
+
+	"hyprland/workspaces": {
+        "show-special": true,
+        "format": "{icon}",
+        "format-icons": {
+            "special": "S"
+        }
+    },
+
+    "keyboard-state": {
+        "numlock": true,
+        "capslock": true,
+        "format": {
+            "capslock": "C{icon}  ",
+            "numlock": "N{icon}"
+        },
+        "format-icons": {
+            "locked": "",
+            "unlocked": ""
+        },
+    },
+
+	"pulseaudio": {
+		"format": "{icon}  {volume:2}%",
+		"format-bluetooth": "{icon}  {volume:2}% ",
+		"format-muted": "  MUT",
+		"format-icons": {
+			"headphones": "",
+			"default": [
+				"",
+				""
+			]
+		},
+		"scroll-step": 1,
+		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+		"on-click-right": "pavucontrol"
+	},
+
+    "backlight": {
+        "format": "{icon} {percent:2}%",
+        "format-icons": ["", "", "", "", "", "", "", "", ""]
+    },
+
+    "network": {
+        "format": "{ifname} DC",
+        "format-wifi": "  {essid:3}",
+    },
+	
+    "cpu": {
+		"interval": 5,
+		"format": "  {usage:2}%"
+	},
+
+	"memory": {
+		"interval": 5,
+		"format": "  {percentage:2}%"
+	},
+    
+	"disk": {
+		"interval": 5,
+		"format": "  {percentage_used:2}%",
+		"path": "/"
+	},
+
+	"battery": {
+		"states": {
+			"good": 95,
+			"warning": 30,
+			"critical": 15
+		},
+		"format": "{icon}  {capacity:2}%",
+		"format-icons": [
+			"",
+			"",
+			"",
+			"",
+			""
+		]
+	},
+
+	"clock": {
+		"format": "{:%H:%M}",
+		"tooltip": true,
+    	"tooltip-format": "<tt><small>{calendar}</small></tt>",
+    	"calendar": {
+    		"mode"          : "month",
+    		"mode-mon-col"  : 3,
+    		"weeks-pos"     : "",
+    		"on-scroll"     : 1,
+	    	"format": {
+		    	"months":     "<span color='#f9e2af'><b>{}</b></span>",
+    			"days":       "<span color='#cdd6f4'><b>{}</b></span>",
+    			"weekdays":   "<span color='#fab387'><b>{}</b></span>",
+    			"today":      "<span color='#f38ba8'><b><u>{}</u></b></span>"
+	    	}
+    	},
+        "actions": {
+    	    "on-click": "mode",
+        }
+    }
+}

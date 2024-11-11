@@ -1,14 +1,12 @@
 * {
-    bg-col:  #1e1e2e;
-    border-col: #181825;
-    selected-col: #313244;
-    mauve: #cba6f7;
-    fg-col: #cdd6f4;
-    fg-col2: #6c7086;
-    grey: #6c7086;
+    bg-col:  #303446;
+    selected-col: #414559;
+    mauve: #ca9ee6;
+    fg-col: #c6d0f5;
+    grey: #737994;
 
     width: 500;
-    font: "JetBrainsMono NFM SemiBold 13";
+    font: "JetBrainsMono NF SemiBold 13";
 }
 
 element-text, element-icon , mode-switcher {
@@ -17,13 +15,15 @@ element-text, element-icon , mode-switcher {
 }
 
 window {
-    height: 228px;
+    height: 232px;
     border: 2px;
-    border-color: @border-col;
+    border-color: @mauve;
+    border-radius: 2px;
     background-color: @bg-col;
 }
 
 mainbox {
+    margin: 0px 4px 0px 4px;
     background-color: @bg-col;
 }
 
@@ -39,7 +39,7 @@ prompt {
     padding: 0px;
     text-color: @mauve;
     border-radius: 0px;
-    margin: 10px 0px 0px 10px;
+    margin: 10px 5px 0px 10px;
 }
 
 entry {
@@ -59,10 +59,11 @@ listview {
 element {
     padding: 5px 0px 5px 10px;
     background-color: @bg-col;
-    text-color: @fg-col2;
+    text-color: @grey;
 }
 
 element selected {
     background-color: @selected-col;
     text-color: @fg-col;
+    border-radius: 2px;
 }

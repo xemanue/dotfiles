@@ -5,8 +5,8 @@ configuration{
     drun-display-format: "{name}";
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: "run: ";
+    display-drun: "run:";
     sidebar-mode: false;
 }
 
-@theme "~/.config/rofi/mine"
+@theme "style.rasi"

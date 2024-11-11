@@ -1,0 +1,78 @@
+@import "mellow.css";
+
+* {
+	font-size: 18px;
+	font-family: JetBrainsMono NF SemiBold;
+}
+
+window#waybar {
+	color: @fg;
+    background: @gray2;
+}
+
+#custom-right-arrow,
+#custom-left-arrow {
+    font-size: 23.5px;
+    color: @cyan;
+}
+#custom-right-arrow,
+#custom-left-arrow {
+    background: @gray3;
+}
+#custom-right-arrow.gray,
+#custom-left-arrow.gray {
+    background: @gray2;
+    color: @gray3;
+}
+
+#workspaces,
+#clock {
+    background: @cyan;
+}
+#window,
+#battery {
+    background: @gray3
+}
+#keyboard-state,
+#pulseaudio,
+#backlight,
+#network {
+	background: @gray2;
+}
+#clock {
+    color: @gray2;
+}
+
+#workspaces {
+    padding: 0px 8px;
+}
+#workspaces button {
+	color: @gray2;
+    padding: 0px 4px;
+}
+#workspaces button:hover {
+    background: none;
+    border-color: @cyan;
+    box-shadow: none;
+	text-shadow: none;
+}
+
+#window {
+	color: @fg;
+    background: @gray3;
+    padding: 0px 8px;
+}
+
+#custom-separator {
+    padding: 0px 8px 0px 10px;
+}
+#pulseaudio,
+#backlight,
+#network,
+#battery,
+#clock {
+	padding: 0px 10px 0px 8px;
+}
+#keyboard-state {
+	padding: 0px 10px 0px 6px;
+}

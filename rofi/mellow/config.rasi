@@ -1,0 +1,12 @@
+configuration{
+    modi: "drun";
+    show-icons: false;
+    terminal: "/home/xema/.local/bin/kitty";
+    drun-display-format: "{name}";
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: "run:";
+    sidebar-mode: false;
+}
+
+@theme "style.rasi"

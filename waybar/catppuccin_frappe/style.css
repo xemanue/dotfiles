@@ -1,4 +1,4 @@
-@import "mocha.css";
+@import "frappe.css";
 
 * {
 	font-size: 18px;
@@ -23,10 +23,10 @@ window#waybar {
 }
 
 #workspaces,
-#tray,
 #keyboard-state,
 #pulseaudio,
 #backlight,
+#network,
 #cpu,
 #memory,
 #disk,
@@ -40,12 +40,11 @@ window#waybar {
 	color: @text;
 }
 #workspaces button:nth-child(1) {
-    padding-left: 9px;
+    padding-left: 10px;
 }
-#workspaces button.focused {
+#workspaces button.active {
 	color: @mauve;
 }
-
 #workspaces button:hover {
     background: none;
     border-color: @base;
@@ -57,7 +56,8 @@ window#waybar {
     color: @text;
 }
 #pulseaudio,
-#backlight {
+#backlight,
+#network {
 	color: @rosewater;
 }
 #cpu,
@@ -74,6 +74,7 @@ window#waybar {
 
 #pulseaudio,
 #backlight,
+#network,
 #cpu,
 #memory,
 #disk,
@@ -81,11 +82,6 @@ window#waybar {
 #clock {
 	padding: 0px 10px 0px 8px;
 }
-
-#tray {
-	padding: 0px 8px 0px 6px;
-}
-
 #keyboard-state {
 	padding: 0px 10px 0px 6px;
 }
