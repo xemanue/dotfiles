@@ -1,0 +1,41 @@
+# Path to your oh-my-zsh installation.
+export ZSH="$HOME/.oh-my-zsh"
+
+# PATH
+path=("$HOME/bin" $path)
+path=("$HOME/.local/bin" $path)
+path=("$HOME/.spicetify" $path)
+path=("/usr/local/go/bin" $path)
+export PATH
+
+# Aliases
+alias clsh="echo \"\" > $HOME/.zsh_history"
+alias :q="exit"
+
+# Set theme
+ZSH_THEME="typewritten"
+
+# Theme config
+TYPEWRITTEN_PROMPT_LAYOUT="singleline"
+TYPEWRITTEN_SYMBOL=">"
+TYPEWRITTEN_ARROW_SYMBOL="->"
+TYPEWRITTEN_RELATIVE_PATH="adaptive"
+TYPEWRITTEN_RELATIVE_PATH="adaptive"
+TYPEWRITTEN_CURSOR="terminal"
+TYPEWRITTEN_DISABLE_RETURN_CODE="true"
+
+# Plugins
+plugins=(
+	git
+	zsh-autosuggestions
+	zsh-syntax-highlighting
+)
+
+# Autosuggestions config
+bindkey '\t' autosuggest-accept
+bindkey '^F' forward-word
+ZSH_AUTOSUGGEST_STRATEGY=(history completion)
+
+# Sources
+source "$HOME/.cargo/env"       # Rust
+source "$ZSH/oh-my-zsh.sh"      # Oh My Zsh (Default)

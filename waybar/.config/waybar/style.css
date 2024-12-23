@@ -1,0 +1,38 @@
+@import "colors.css";
+
+* {
+	font-size: 18px;
+	font-family: "Iosevkust SemiBold SE";
+}
+
+#waybar {
+    color: @text;
+	background: @base;
+}
+
+#network {
+	margin-left: 1.5rem;
+}
+
+#clock {
+	margin-right: 1.5rem;
+}
+
+#workspaces {
+	margin: -1rem;
+}
+
+#workspaces button {
+    color: @overlay0;
+}
+
+#workspaces button:hover {
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+	text-shadow: none;
+}
+
+#workspaces button.active {
+    color: @lavender;
+}

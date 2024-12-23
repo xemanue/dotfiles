@@ -1,0 +1,27 @@
+[global]
+follow = keyboard
+width = 300
+height = 200
+origin = top-right
+offset = 8x8
+progress_bar = false
+progress_bar_height = 8
+progress_bar_frame_width = 2
+progress_bar_corner_radius = 1
+padding = 16
+horizontal_padding = 16
+frame_width = 2
+frame_color = "#414559"
+gap_size = 8
+separator_color = frame
+font = "Iosevkust SemiBold SE 10"
+format = <span color="#babbf1" font_desc="Iosevkust SemiBold SE 12">%s</span>\n<span font_desc="Iosevkust SemiBold SE 10">%b</span>\n
+corner_radius = 6
+background = "#303446"
+foreground = "#c6d0f5"
+timeout = 3
+highlight = "#babbf1"
+min_icon_size = 48
+max_icon_size = 48
+
+# vim: ft=cfg

@@ -1,0 +1,70 @@
+@import "../colors.rasi"
+
+*{
+    width: 500;
+    font: "Iosevkust SemiBold SE 14";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    padding: 0px;
+    height: 342px;
+    border: 0px;
+    border-color: @lavender;
+    border-radius: 8px;
+    background-color: @mantle;
+}
+
+mainbox {
+    margin: 16px;
+    spacing: 8px;
+    padding: 0px;
+    background-color: @mantle;
+}
+
+inputbar {
+    spacing: 8px;
+    children: [prompt, entry];
+    background-color: @mantle;
+    border-radius: 0px;
+}
+
+prompt {
+    padding: 10px 16px;
+    background-color: @base;
+    text-color: @lavender;
+    border-radius: 4px;
+}
+
+entry {
+    padding: 10px 16px;
+    text-color: @text;
+    background-color: @base;
+    border-radius: 4px;
+}
+
+listview {
+    padding: 0px;
+    spacing: 8px;
+    columns: 1;
+    lines: 5;
+    background-color: @mantle;
+}
+
+element {
+    padding: 10px 16px;
+    text-color: @text;
+    background-color: @base;
+    border-radius: 4px;
+}
+
+element selected {
+    padding: 0px;
+    background-color: @lavender;
+    text-color: @base;
+    border-radius: 2px;
+}

@@ -1,0 +1,13 @@
+configuration {
+    modi: "clipboard";
+    show-icons: false;
+    terminal: "foot";
+    drun-display-format: "{name}";
+    disable-history: false;
+    hide-scrollbar: true;
+    display-clipboard: "paste:";
+    sidebar-mode: false;
+    cycle: false;
+}
+
+@theme "../dmenu/style.rasi"

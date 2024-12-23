@@ -1,0 +1,13 @@
+configuration {
+    modi: "drun";
+    show-icons: false;
+    terminal: "foot";
+    drun-display-format: "{name}";
+    disable-history: false;
+    hide-scrollbar: true;
+    display-drun: ">";
+    sidebar-mode: false;
+    cycle: false;
+}
+
+@theme "style.rasi"
