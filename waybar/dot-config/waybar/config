@@ -3,9 +3,10 @@
 {
 	"layer": "top",
 	"position": "top",
-    "width": 1280,
-    "height": 36,
+    "height": 40,
     "margin-top": 8,
+    "margin-left": 8,
+    "margin-right": 8,
     "spacing": 16,
 
 	"modules-left": [

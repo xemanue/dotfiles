@@ -2,12 +2,13 @@
 
 * {
 	font-size: 18px;
-	font-family: "Iosevkust SemiBold SE";
+	font-family: "JetBrainsMono NF SemiBold";
 }
 
 #waybar {
     color: @text;
 	background: @base;
+    border-radius: 0.5rem;
 }
 
 #network {

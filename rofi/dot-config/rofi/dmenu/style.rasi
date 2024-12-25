@@ -2,7 +2,7 @@
 
 *{
     width: 500;
-    font: "Iosevkust SemiBold SE 14";
+    font: "JetBrainsMono NF SemiBold 13";
 }
 
 element-text, element-icon , mode-switcher {
@@ -12,9 +12,9 @@ element-text, element-icon , mode-switcher {
 
 window {
     padding: 0px;
-    height: 342px;
+    width: 480px;
+    height: 312px;
     border: 0px;
-    border-color: @lavender;
     border-radius: 8px;
     background-color: @mantle;
 }
@@ -34,14 +34,14 @@ inputbar {
 }
 
 prompt {
-    padding: 10px 16px;
+    padding: 8px 15px;
     background-color: @base;
     text-color: @lavender;
     border-radius: 4px;
 }
 
 entry {
-    padding: 10px 16px;
+    padding: 8px 0px 8px 16px;
     text-color: @text;
     background-color: @base;
     border-radius: 4px;
@@ -56,15 +56,14 @@ listview {
 }
 
 element {
-    padding: 10px 16px;
+    padding: 8px 0px 8px 16px;
     text-color: @text;
     background-color: @base;
     border-radius: 4px;
 }
 
 element selected {
-    padding: 0px;
-    background-color: @lavender;
+    background-color: @text;
     text-color: @base;
     border-radius: 2px;
 }
