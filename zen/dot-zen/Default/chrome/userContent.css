@@ -1,20 +1,16 @@
-/* Catppuccin Frappe Red userContent.css*/
-
 @media (prefers-color-scheme: dark) {
 
   /* Common variables affecting all pages */
   @-moz-document url-prefix("about:") {
     :root {
       --in-content-page-color: #c6d0f5 !important;
-      --color-accent-primary: #babbf1 !important;
-      --color-accent-primary-hover: rgb(235, 153, 154) !important;
-      --color-accent-primary-active: rgb(231, 154, 131) !important;
-      background-color: #292c3c !important;
-      --in-content-page-background: #292c3c !important;
-      --in-content-primary-button-background-hover: rgb(92, 99, 124) !important;
-      --in-content-primary-button-text-color-hover: #c6d0f5 !important;
-      --in-content-primary-button-background: #51576d !important;
-      --in-content-primary-button-text-color: #c6d0f5 !important;
+      --color-accent-primary: #c6d0f5 !important;
+      --color-accent-primary-hover: #00ff00 !important;
+      --color-accent-primary-active: #ff0000 !important;
+      background-color: #303446 !important;
+      --in-content-page-background: #303446 !important;
+      --in-content-button-background-hover: #c6d0f510 !important;
+
     }
 
   }
@@ -24,19 +20,19 @@
 
     :root {
       --newtab-background-color: #292c3c !important;
-      --newtab-background-color-secondary: #414559 !important;
-      --newtab-element-hover-color: #414559 !important;
+      --newtab-background-color-secondary: #c6d0f520 !important;
+      --newtab-element-hover-color: #c6d0f510 !important;
       --newtab-text-primary-color: #c6d0f5 !important;
       --newtab-wordmark-color: #c6d0f5 !important;
-      --newtab-primary-action-background: #babbf1 !important;
+      --newtab-primary-action-background: #c6d0f5 !important;
     }
 
     .icon {
-      color: #c6d0f5 !important;
+      color: #c6d0f580 !important;
     }
-    
-    .icon-pin-small {
-      color: #babbf1 !important;
+
+    .top-site-outer .top-site-icon {
+      background-color: #00000000 !important;
     }
 
     .search-wrapper .logo-and-wordmark .logo {
@@ -45,6 +41,10 @@
       height: 82px !important;
       width: 82px !important;
       background-size: 82px !important;
+    }
+
+    .search-wrapper .search-handoff-button, .search-wrapper input {
+      background-color: #c6d0f510 !important;
     }
 
     @media (max-width: 609px) {
@@ -56,7 +56,7 @@
     }
 
     .card-outer:is(:hover, :focus, .active):not(.placeholder) .card-title {
-      color: #babbf1 !important;
+      color: #c6d0f5 !important;
     }
 
     .top-site-outer .search-topsite {
@@ -73,15 +73,15 @@
     :root {
       --zen-colors-tertiary: #292c3c !important;
       --in-content-text-color: #c6d0f5 !important;
-      --link-color: #babbf1 !important;
+      --link-color: #c6d0f5 !important;
       --link-color-hover: rgb(235, 153, 154) !important;
       --zen-colors-primary: #414559 !important;
       --in-content-box-background: #414559 !important;
-      --zen-primary-color: #babbf1 !important;
+      --zen-primary-color: #c6d0f5 !important;
     }
 
     groupbox , moz-card{
-      background: #292c3c !important;
+      background: #303446 !important;
     }
 
     button,
@@ -139,14 +139,14 @@
   @-moz-document url-prefix("about:addons") {
     :root {
       --zen-dark-color-mix-base: #292c3c !important;
-      --background-color-box: #292c3c !important;
+      --background-color-box: #303446 !important;
     }
   }
 
   /* Variables and styles specific to about:protections */
   @-moz-document url-prefix("about:protections") {
     :root {
-      --zen-primary-color: #292c3c !important;
+      --zen-primary-color: #303446 !important;
       --social-color: #ca9ee6 !important;
       --coockie-color: #99d1db !important;
       --fingerprinter-color: #e5c890 !important;

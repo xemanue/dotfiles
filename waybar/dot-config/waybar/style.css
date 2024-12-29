@@ -2,7 +2,8 @@
 
 * {
 	font-size: 18px;
-	font-family: "JetBrainsMono NF SemiBold";
+	font-family: "JetBrainsMono NF";
+	font-weight: bold;
 }
 
 #waybar {
