@@ -11,6 +11,7 @@ export PATH
 # Aliases
 alias clsh="echo \"\" > $HOME/.zsh_history"
 alias :q="exit"
+alias ff="fastfetch"
 
 # Set theme
 ZSH_THEME="typewritten"
