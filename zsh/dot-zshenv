@@ -1,0 +1,2 @@
+ZDOTDIR=~/.config/zsh
+HISTFILE=~/.config/zsh/.zsh_history

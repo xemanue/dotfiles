@@ -1,7 +1,7 @@
 configuration {
     modi: "drun";
     show-icons: false;
-    terminal: "foot";
+    terminal: "kitty";
     drun-display-format: "{name}";
     disable-history: false;
     hide-scrollbar: true;
