@@ -10,9 +10,11 @@
     "spacing": 16,
 
 	"modules-left": [
+        "battery",
+        "custom/separator",
         "network",
         "custom/separator",
-        "battery"
+        "bluetooth",
     ],
     "modules-center": [
         "hyprland/workspaces"
@@ -35,47 +37,43 @@
         "show-special": true,
         "format": "{name}",
     },
+
+    "bluetooth": {
+        "format-on": "󰂯 ON",
+        "format-off": "󰂲 OFF",
+        "format-connected": "󰂱 CON",
+        "tooltip": true,
+        "tooltip-connected": "{device_alias}",
+    },
 	
 	"pulseaudio": {
-		"format": "{icon} {volume:3}%",
-		"format-bluetooth": "{icon} {volume:3}%",
+		"format": "  {volume:2}%",
 		"format-muted": "  MUT",
-		"format-icons": {
-			"headphones": "",
-			"default": [
-				"",
-				""
-			]
-		},
+        "tooltip": true,
+        "tooltip-format": "{desc}",
 		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"on-click-right": "pavucontrol",
 	},
 
     "backlight": {
-        "format": "{icon} {percent:3}%",
-        "format-icons": ["", "", "", "", "", "", "", "", ""],
+        "format": "󰃟  {percent:2}%",
+        "tooltip": false,
     },
 
     "network": {
-        "format": "{ifname} DC",
-        "format-wifi": "  {essid:3}",
+        "format-wifi": "  CON",
+        "format-ethernet": "  CON",
+        "format-disconnected": "󰌙  DCd",
+        "tooltip": true,
+        "tooltip-wifi": "{essid}   {bandwidthDownBytes}B/s  {bandwidthUpBytes}B/s",
+        "tooltip-ethernet": "{ipaddr}   {bandwidthDownBytes}B/s  {bandwidthUpBytes}B/s",
     },
 	
 	"battery": {
-		"states": {
-			"good": 95,
-			"warning": 30,
-			"critical": 15
-		},
-		"format": "{icon} {capacity:2}%",
-        "format-charging": "CH {capacity:2}%",
-		"format-icons": [
-			" ",
-			" ",
-			" ",
-			" ",
-			" "
-		]
+		"format": "󰁿 {capacity:2}%",
+        "format-charging": "󰂉 {capacity:2}%",
+        "tooltip": true,
+        "tooltip-format": "{timeTo}",
 	},
 
 	"clock": {
