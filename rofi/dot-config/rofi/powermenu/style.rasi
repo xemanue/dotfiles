@@ -140,7 +140,7 @@ element {
     enabled:                     true;
     spacing:                     0px;
     margin:                      0px;
-    padding:                     29px 0px;
+    padding:                     29px 0px 34px;
     border:                      0px solid;
     border-radius:               8px;
     border-color:                @lavender;
