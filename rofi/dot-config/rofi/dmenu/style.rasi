@@ -2,7 +2,7 @@
 
 *{
     width: 500;
-    font: "JetBrainsMono NF SemiBold 13";
+    font: "JetBrainsMonoNL NF SemiBold 13";
 }
 
 element-text, element-icon , mode-switcher {
