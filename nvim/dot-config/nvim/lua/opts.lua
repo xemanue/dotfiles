@@ -33,10 +33,3 @@ vim.opt.autochdir = true
 
 vim.g.loaded_netrwPlugin = true
 vim.g.loaded_netrw = true
-
--- Rasi file type
-vim.filetype.add {
-    extension = {
-        rasi = 'rasi',
-    },
-}
