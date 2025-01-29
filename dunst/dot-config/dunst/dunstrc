@@ -1,4 +1,10 @@
 [global]
+    
+    ### Theme ###
+    background = "#303446"
+    foreground = "#c6d0f5"
+    frame_color = "#737994"
+
     ### Display ###
 
     # Which monitor should the notifications be displayed on.
@@ -107,12 +113,6 @@
     # Defines width in pixels of frame around the notification window.
     # Set to 0 to disable.
     frame_width = 2
-
-    # Defines color of the frame around the notification window.
-    frame_color = "#737994"
-
-    background = "#303446"
-    foreground = "#c6d0f5"
 
     # Size of gap to display between notifications - requires a compositor.
     # If value is greater than 0, separator_height will be ignored and a border
