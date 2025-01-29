@@ -13,8 +13,11 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "../colors.rasi"
-@import                          "font.rasi"
+@import                          "../themes/frappe.rasi"
+
+* {
+    font: "JetBrainsMonoNL NF Bold 13";
+}
 
 /*
 USE_BUTTONS=YES

@@ -1,8 +1,8 @@
 #!/usr/bin/env bash
 
 # Current Theme
-dir="$HOME/.config/rofi/powermenu"
-theme='style'
+dir="$HOME/.config/rofi/styles"
+theme='pmenu'
 
 # CMDs
 uptime="`uptime -p | sed -e 's/up //g'`"
@@ -29,7 +29,7 @@ confirm_cmd() {
 	rofi -dmenu \
 		-p 'Confirmation' \
 		-mesg 'Are you Sure?' \
-		-theme ${dir}/confirm.rasi
+		-theme ${dir}/pmenu_confirm.rasi
 }
 
 # Ask for confirmation

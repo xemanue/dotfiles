@@ -10,7 +10,7 @@ path=("$HOME/Android/Sdk/platform-tools" $path)
 export PATH
 
 # Aliases
-alias clsh="echo \"\" > $HOME/.zsh_history"
+alias clsh="echo \"\" > $HOME/.config/zsh/.zsh_history"
 alias :q="exit"
 alias ff="fastfetch"
 

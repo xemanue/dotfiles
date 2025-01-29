@@ -13,8 +13,11 @@ configuration {
 }
 
 /*****----- Global Properties -----*****/
-@import                          "../colors.rasi"
-@import                          "font.rasi"
+@import                          "../themes/frappe.rasi"
+
+* {
+    font: "JetBrainsMonoNL NF Bold 13";
+}
 
 /*****----- Main Window -----*****/
 
@@ -23,7 +26,7 @@ window {
     anchor:                      center;
     fullscreen:                  false;
     width:                       252px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     cursor:                      "default";
     background-color:            @mantle;
 }
@@ -35,7 +38,7 @@ mainbox {
     margin:                      0px;
     padding:                     16px;
     border:                      0px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     background-color:            transparent;
     children:                    [ "message", "listview" ];
 }
@@ -46,7 +49,7 @@ message {
     margin:                      0px;
     padding:                     8px 0px;
     border:                      0px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     background-color:            @base;
     text-color:                  @text;
 }
@@ -76,7 +79,7 @@ listview {
     margin:                      0px;
     padding:                     0px;
     border:                      0px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     background-color:            transparent;
     text-color:                  @text;
     cursor:                      "default";
@@ -85,7 +88,7 @@ listview {
 /*****----- Elements -----*****/
 element {
     padding:                     23px 0px 24px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     background-color:            @base;
     text-color:                  @text;
     cursor:                      pointer;
