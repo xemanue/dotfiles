@@ -36,7 +36,7 @@ window {
     margin:                      0px;
     padding:                     0px;
     border:                      0px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     cursor:                      "default";
     background-color:            @mantle;
 }
@@ -48,7 +48,7 @@ mainbox {
     margin:                      0px;
     padding:                     16px;
     border:                      0px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     background-color:            transparent;
     children:                    [ "inputbar", "listview" ];
 }
@@ -60,7 +60,7 @@ inputbar {
     margin:                      0px;
     padding:                     0px;
     border:                      0px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     border-color:                @lavender;
     background-color:            transparent;
     text-color:                  @text;
@@ -72,14 +72,14 @@ textbox-prompt-colon {
     expand:                      false;
     str:                         ">";
     padding:                     8px 15px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     background-color:            @base;
     text-color:                  @text;
 }
 prompt {
     enabled:                     true;
     padding:                     8px 16px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     background-color:            @base;
     text-color:                  @text;
 }
@@ -90,7 +90,7 @@ message {
     margin:                      0px;
     padding:                     8px 0px 8px 16px;
     border:                      0px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     background-color:            @base;
     text-color:                  @text;
 }
@@ -106,7 +106,7 @@ textbox {
 error-message {
     padding:                     12px;
     border:                      0px solid;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     border-color:                @lavender;
     background-color:            @mantle;
     text-color:                  @text;
@@ -129,7 +129,7 @@ listview {
     margin:                      0px;
     padding:                     0px;
     border:                      0px;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     background-color:            transparent;
     text-color:                  @text;
     cursor:                      "default";
@@ -142,7 +142,7 @@ element {
     margin:                      0px;
     padding:                     29px 0px 34px;
     border:                      0px solid;
-    border-radius:               8px;
+    border-radius:               0px; /* 8px */
     border-color:                @lavender;
     background-color:            @base;
     text-color:                  @text;
