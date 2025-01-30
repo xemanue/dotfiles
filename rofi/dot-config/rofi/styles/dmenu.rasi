@@ -1,4 +1,4 @@
-@import "../themes/frappe.rasi"
+@import "../theme.rasi"
 
 *{
     width: 500;
