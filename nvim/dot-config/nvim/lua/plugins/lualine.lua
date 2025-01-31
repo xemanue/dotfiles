@@ -7,6 +7,7 @@ return
             options = {
         		icons_enabled = true,
                 theme = "auto", -- or 'dracula', 'tokyonight', or your preferred theme
+                section_separators = "",
         		component_separators = { left = "|", right = "|" },
         		globalstatus = true,
         	},
