@@ -1,0 +1,69 @@
+@import "../theme.rasi"
+
+*{
+    width: 500;
+    font: "JetBrainsMonoNL NF SemiBold 13";
+}
+
+element-text, element-icon , mode-switcher {
+    background-color: inherit;
+    text-color:       inherit;
+}
+
+window {
+    padding: 0px;
+    width: 480px;
+    height: 312px;
+    border: 0px;
+    border-radius: 0px; /* 8px */
+    background-color: @mantle;
+}
+
+mainbox {
+    margin: 16px;
+    spacing: 8px;
+    padding: 0px;
+    background-color: @mantle;
+}
+
+inputbar {
+    spacing: 8px;
+    children: [prompt, entry];
+    background-color: @mantle;
+    border-radius: 0px;
+}
+
+prompt {
+    padding: 8px 15px;
+    background-color: @base;
+    text-color: @lavender;
+    border-radius: 0px; /* 4px */
+}
+
+entry {
+    padding: 8px 0px 9px 16px;
+    text-color: @text;
+    background-color: @base;
+    border-radius: 0px; /* 4px */
+}
+
+listview {
+    padding: 0px;
+    spacing: 8px;
+    columns: 1;
+    lines: 5;
+    background-color: @mantle;
+}
+
+element {
+    padding: 8px 0px 9px 16px;
+    text-color: @text;
+    background-color: @base;
+    border-radius: 0px; /* 4px */
+}
+
+element selected {
+    background-color: @text;
+    text-color: @base;
+    border-radius: 0px; /* 2px */
+}

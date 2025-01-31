@@ -1,15 +1,16 @@
-@media (prefers-color-scheme: dark) {
+@import "theme.css";
 
+@media (prefers-color-scheme: dark) {
   /* Common variables affecting all pages */
   @-moz-document url-prefix("about:") {
     :root {
-      --in-content-page-color: #c6d0f5 !important;
-      --color-accent-primary: #c6d0f5 !important;
+      --in-content-page-color: var(--text) !important;
+      --color-accent-primary: var(--text) !important;
       --color-accent-primary-hover: #00ff00 !important;
       --color-accent-primary-active: #ff0000 !important;
-      background-color: #303446 !important;
-      --in-content-page-background: #303446 !important;
-      --in-content-button-background-hover: #c6d0f510 !important;
+      background-color: var(--base) !important;
+      --in-content-page-background: var(--base) !important;
+      --in-content-button-background-hover: var(--surface0) !important;
 
     }
 
@@ -19,16 +20,16 @@
   @-moz-document url("about:newtab"), url("about:home") {
 
     :root {
-      --newtab-background-color: #292c3c !important;
-      --newtab-background-color-secondary: #c6d0f520 !important;
-      --newtab-element-hover-color: #c6d0f510 !important;
-      --newtab-text-primary-color: #c6d0f5 !important;
-      --newtab-wordmark-color: #c6d0f5 !important;
-      --newtab-primary-action-background: #c6d0f5 !important;
+      --newtab-background-color: var(--mantle) !important;
+      --newtab-background-color-secondary: var(--surface1) !important;
+      --newtab-element-hover-color: var(--surface0) !important;
+      --newtab-text-primary-color: var(--text) !important;
+      --newtab-wordmark-color: var(--text) !important;
+      --newtab-primary-action-background: var(--text) !important;
     }
 
     .icon {
-      color: #c6d0f580 !important;
+      color: rgba(var(--text)/0.5) !important;
     }
 
     .top-site-outer .top-site-icon {
@@ -36,7 +37,7 @@
     }
 
     .search-wrapper .logo-and-wordmark .logo {
-      background: url("zen-logo-frappe.svg"), url("https://raw.githubusercontent.com/IAmJafeth/zen-browser/main/themes/Frappe/Red/zen-logo-frappe.svg") no-repeat center !important;
+      background: url("zen-logo-macchiato.svg"), url("https://raw.githubusercontent.com/IAmJafeth/zen-browser/main/themes/Macchiato/Lavender/zen-logo-frappe.svg") no-repeat center !important;
       display: inline-block !important;
       height: 82px !important;
       width: 82px !important;
@@ -44,7 +45,7 @@
     }
 
     .search-wrapper .search-handoff-button, .search-wrapper input {
-      background-color: #c6d0f510 !important;
+      background-color: var(--surface0) !important;
     }
 
     @media (max-width: 609px) {
@@ -56,111 +57,112 @@
     }
 
     .card-outer:is(:hover, :focus, .active):not(.placeholder) .card-title {
-      color: #c6d0f5 !important;
+      color: var(--text) !important;
     }
 
     .top-site-outer .search-topsite {
-      background-color: #8caaee !important;
+      background-color: var(--blue) !important;
     }
 
     .compact-cards .card-outer .card-context .card-context-icon.icon-download {
-      fill: #a6d189 !important;
+      fill: var(--green) !important;
     }
   }
 
   /* Variables and styles specific to about:preferences */
   @-moz-document url-prefix("about:preferences") {
     :root {
-      --zen-colors-tertiary: #292c3c !important;
-      --in-content-text-color: #c6d0f5 !important;
-      --link-color: #c6d0f5 !important;
-      --link-color-hover: rgb(235, 153, 154) !important;
-      --zen-colors-primary: #414559 !important;
-      --in-content-box-background: #414559 !important;
-      --zen-primary-color: #c6d0f5 !important;
+      --zen-colors-tertiary: var(--mantle) !important;
+      --in-content-text-color: var(--text) !important;
+      --link-color: var(--text) !important;
+      --link-color-hover: var(--subtext0) !important;
+      --zen-colors-primary: var(--surface0) !important;
+      --in-content-box-background: var(--surface0) !important;
+      --zen-primary-color: var(--text) !important;
     }
 
-    groupbox , moz-card{
-      background: #303446 !important;
+    groupbox,
+    moz-card{
+      background: var(--base) !important;
     }
 
     button,
     groupbox menulist {
-      background: #414559 !important;
-      color: #c6d0f5 !important;
+      background: var(--surface0) !important;
+      color: var(--text) !important;
     }
 
     .main-content {
-      background-color: #232634 !important;
+      background-color: var(--crust) !important;
     }
 
     .identity-color-blue {
-      --identity-tab-color: #8aadf4 !important;
-      --identity-icon-color: #8aadf4 !important;
+      --identity-tab-color: var(--blue) !important;
+      --identity-icon-color: var(--blue) !important;
     }
 
     .identity-color-turquoise {
-      --identity-tab-color: #8bd5ca !important;
-      --identity-icon-color: #8bd5ca !important;
+      --identity-tab-color: var(--teal) !important;
+      --identity-icon-color: var(--teal) !important;
     }
 
     .identity-color-green {
-      --identity-tab-color: #a6da95 !important;
-      --identity-icon-color: #a6da95 !important;
+      --identity-tab-color: var(--green) !important;
+      --identity-icon-color: var(--green) !important;
     }
 
     .identity-color-yellow {
-      --identity-tab-color: #eed49f !important;
-      --identity-icon-color: #eed49f !important;
+      --identity-tab-color: var(--yellow) !important;
+      --identity-icon-color: var(--yellow) !important;
     }
 
     .identity-color-orange {
-      --identity-tab-color: #f5a97f !important;
-      --identity-icon-color: #f5a97f !important;
+      --identity-tab-color: var(--peach) !important;
+      --identity-icon-color: var(--peach) !important;
     }
 
     .identity-color-red {
-      --identity-tab-color: #ed8796 !important;
-      --identity-icon-color: #ed8796 !important;
+      --identity-tab-color: var(--red) !important;
+      --identity-icon-color: var(--red) !important;
     }
 
     .identity-color-pink {
-      --identity-tab-color: #f5bde6 !important;
-      --identity-icon-color: #f5bde6 !important;
+      --identity-tab-color: var(--pink) !important;
+      --identity-icon-color: var(--pink) !important;
     }
 
     .identity-color-purple {
-      --identity-tab-color: #c6a0f6 !important;
-      --identity-icon-color: #c6a0f6 !important;
+      --identity-tab-color: var(--mauve) !important;
+      --identity-icon-color: var(--mauve) !important;
     }
   }
 
   /* Variables and styles specific to about:addons */
   @-moz-document url-prefix("about:addons") {
     :root {
-      --zen-dark-color-mix-base: #292c3c !important;
-      --background-color-box: #303446 !important;
+      --zen-dark-color-mix-base: var(--mantle) !important;
+      --background-color-box: var(--base) !important;
     }
   }
 
   /* Variables and styles specific to about:protections */
   @-moz-document url-prefix("about:protections") {
     :root {
-      --zen-primary-color: #303446 !important;
-      --social-color: #ca9ee6 !important;
-      --coockie-color: #99d1db !important;
-      --fingerprinter-color: #e5c890 !important;
-      --cryptominer-color: #babbf1 !important;
-      --tracker-color: #a6d189 !important;
-      --in-content-primary-button-background-hover: rgb(92, 99, 124) !important;
-      --in-content-primary-button-text-color-hover: #c6d0f5 !important;
-      --in-content-primary-button-background: #51576d !important;
-      --in-content-primary-button-text-color: #c6d0f5 !important;
+      --zen-primary-color: var(--base) !important;
+      --social-color: var(--mauve) !important;
+      --cockie-color: var(--sky) !important;
+      --fingerprinter-color: var(--yellow) !important;
+      --cryptominer-color: var(--lavender) !important;
+      --tracker-color: var(--green) !important;
+      --in-content-primary-button-background-hover: var(--overlay0) !important;
+      --in-content-primary-button-text-color-hover: var(--text) !important;
+      --in-content-primary-button-background: var(--surface0) !important;
+      --in-content-primary-button-text-color: var(--text) !important;
     }
 
 
     .card {
-      background-color: #414559 !important;
+      background-color: var(--surface0) !important;
     }
   }
 }

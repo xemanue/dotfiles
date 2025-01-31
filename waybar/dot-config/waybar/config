@@ -1,28 +1,26 @@
 // -*- mode: json -*-
 
 {
-	"layer": "top",
-	"position": "top",
-    "height": 40,
-    "margin-top": 16,
-    "margin-left": 16,
-    "margin-right": 16,
+	"layer": "bottom",
+	"position": "bottom",
+    "height": 56,
+    "margin-top": 0,
+    "margin-left": 0,
+    "margin-right": 0,
     "spacing": 16,
+    "mode": "dock",
+    "exclusive": false,
+    "reload_style_on_change": true,
+
 
 	"modules-left": [
-        "battery",
-        "custom/separator",
         "network",
-        "custom/separator",
-        "bluetooth",
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
 	"modules-right": [
         "pulseaudio",
-        "custom/separator",
-        "backlight",
         "custom/separator",
         "clock"
     ],
@@ -53,6 +51,7 @@
         "tooltip-format": "{desc}",
 		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
 		"on-click-right": "pavucontrol",
+        "scroll-step": 2,
 	},
 
     "backlight": {
@@ -61,12 +60,13 @@
     },
 
     "network": {
-        "format-wifi": "  CON",
-        "format-ethernet": "  CON",
+        "format-wifi": "  {essid}",
+        "format-ethernet": "  {ipaddr}",
         "format-disconnected": "󰌙  DCd",
         "tooltip": true,
-        "tooltip-wifi": "{essid}   {bandwidthDownBytes}B/s  {bandwidthUpBytes}B/s",
-        "tooltip-ethernet": "{ipaddr}   {bandwidthDownBytes}B/s  {bandwidthUpBytes}B/s",
+        "tooltip-format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "tooltip-format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "interval": 1,
     },
 	
 	"battery": {
@@ -79,7 +79,7 @@
 	"clock": {
 		"format": "{:%H:%M}",
 		"tooltip": true,
-    	"tooltip-format": "<tt><small>{calendar}</small></tt>",
+    	"tooltip-format": "{calendar}",
     	"calendar": {
     		"mode"          : "month",
     		"mode-mon-col"  : 3,

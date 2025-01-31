@@ -1,0 +1,6 @@
+### Theme ###
+background = "#303446"
+foreground = "#c6d0f5"
+frame_color = "#737994"
+
+# vim: ft=cfg

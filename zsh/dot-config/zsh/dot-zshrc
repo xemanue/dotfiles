@@ -1,15 +1,16 @@
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.oh-my-zsh"
+export ZSH="$HOME/.config/oh-my-zsh"
 
 # PATH
 path=("$HOME/bin" $path)
 path=("$HOME/.local/bin" $path)
-# path=("$HOME/.spicetify" $path)
+path=("$HOME/.spicetify" $path)
+path=("$HOME/Android/Sdk/platform-tools" $path)
 # path=("/usr/local/go/bin" $path)
 export PATH
 
 # Aliases
-alias clsh="echo \"\" > $HOME/.zsh_history"
+alias clsh="echo \"\" > $HOME/.config/zsh/.zsh_history"
 alias :q="exit"
 alias ff="fastfetch"
 
@@ -38,5 +39,5 @@ bindkey '^F' forward-word
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Sources
-# source "$HOME/.cargo/env"     # Rust
+source "$HOME/.cargo/env"     # Rust
 source "$ZSH/oh-my-zsh.sh"      # Oh My Zsh (Default)
