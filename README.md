@@ -10,7 +10,7 @@ This is a collection of the configurations I use daily. They are only guaranteed
 
 ## Screenshots
 
-![show1](https://github.com/user-attachments/assets/28f2f090-5211-4b4a-8a1b-cb40dd10739e)
-![show2](https://github.com/user-attachments/assets/b89368c5-64b6-492b-803a-2660482d14ab)
-![show3](https://github.com/user-attachments/assets/6097f87b-faf0-43ad-8532-a0cffa31447c)
-![show4](https://github.com/user-attachments/assets/c4667f2f-125e-4fe4-ae1c-0592f9541a05)
+![show1](https://github.com/user-attachments/assets/548e651f-cb17-4ebc-992d-8e6e9d747054)
+![show2](https://github.com/user-attachments/assets/bb1e6ad9-88d5-45ab-a227-1e1ffff4d3a6)
+![show3](https://github.com/user-attachments/assets/e0833227-9f8f-4654-9945-b23c60b2542f)
+![show4](https://github.com/user-attachments/assets/39d7fa61-47ef-4271-9ea7-3c6c3092d3f0)
