@@ -2,7 +2,7 @@
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --zen-colors-primary: rgba(var(--text-rgb)/0.125) !important;
+    --zen-colors-primary: var(--surface0) !important;
     --zen-primary-color: var(--text) !important;
     --zen-colors-secondary: var(--mantle) !important;
     --zen-colors-tertiary: var(--base) !important;
@@ -26,13 +26,13 @@
     --zen-main-browser-background: var(--base) !important;
     --lwt-accent-color-inactive: var(--base) !important;
 
-    --panel-item-hover-bgcolor: rgba(var(--text-rgb)/0.125) !important;
-    --button-hover-bgcolor: rgba(var(--text)/0.125) !important;
+    --panel-item-hover-bgcolor: var(--surface0) !important;
+    --button-hover-bgcolor: var(--surface0) !important;
   }
 
   #tabbrowser-tabs {
-    --tab-selected-bgcolor: rgba(var(--text)/0.25) !important;
-    --tab-hover-background-color: rgba(var(--text)/0.125) !important;
+    --tab-selected-bgcolor: var(--surface1) !important;
+    --tab-hover-background-color: var(--surface0) !important;
   }
 
   #permissions-granted-icon{
