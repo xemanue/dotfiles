@@ -15,11 +15,17 @@
 
 	"modules-left": [
         "network",
+        "custom/separator",
+        "bluetooth"
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
 	"modules-right": [
+        "battery",
+        "custom/separator",
+        "backlight",
+        "custom/separator",
         "pulseaudio",
         "custom/separator",
         "clock"

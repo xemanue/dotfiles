@@ -1,5 +1,5 @@
 # Path to your oh-my-zsh installation.
-export ZSH="$HOME/.config/oh-my-zsh"
+export ZSH="$HOME/.config/omz"
 
 # PATH
 path=("$HOME/bin" $path)
@@ -40,4 +40,4 @@ ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Sources
 source "$HOME/.cargo/env"     # Rust
-source "$ZSH/oh-my-zsh.sh"      # Oh My Zsh (Default)
+source "$ZSH/oh-my-zsh.sh"    # Oh My Zsh
