@@ -15,10 +15,8 @@ return
                 offsets = {
                     {
                         filetype = "neo-tree",
-                        text = "Neotree",
                         highlight = "Directory",
-                        text_align = "left",
-                        separator = "|"
+                        separator = true,
                     }
                 },
                 separator_style = "slant"

@@ -1,57 +1,52 @@
 return
 {
-    {
-        "williamboman/mason.nvim",
-        enabled = false,
-        config = function()
-            require("mason").setup()
-        end
-    },
-    {
-        "williamboman/mason-lspconfig.nvim",
-        enabled = false,
-        config = function()
-            require("mason-lspconfig").setup({
-                ensure_installed = {
-                    "lua_ls",
-                    "clangd",
-                    "cssls",
-                    "html",
-                    "ts_ls",
-                    "jsonls",
-                    "marksman",
-                    "pylsp",
-                    "rust_analyzer",
-                    "sqlls",
-                    "vimls",
-                }
-            })
-        end
-    },
-    {
-        "neovim/nvim-lspconfig",
-        enabled = false,
-        config = function()
-            local lspconfig = require("lspconfig")
-            lspconfig.lua_ls.setup({})
-            lspconfig.clangd.setup({})
-            lspconfig.cssls.setup({})
-            lspconfig.html.setup({})
-            lspconfig.ts_ls.setup({})
-            lspconfig.jsonls.setup({})
-            lspconfig.marksman.setup({})
-            lspconfig.pylsp.setup({})
-            lspconfig.rust_analyzer.setup({})
-            lspconfig.sqlls.setup({})
-            lspconfig.vimls.setup({})
-
-            vim.keymap.set('n', 'gD', vim.lsp.buf.declaration, opts)
-            vim.keymap.set('n', 'gd', vim.lsp.buf.definition, opts)
-            vim.keymap.set('n', 'K', vim.lsp.buf.hover, opts)
-            vim.keymap.set('n', 'gi', vim.lsp.buf.implementation, opts)
-            vim.keymap.set({ 'n', 'v' },  '<leader>ca', vim.lsp.buf.code_action, opts)
-            vim.keymap.set('n',  '<leader>rn', vim.lsp.buf.rename, opts)
-            vim.keymap.set('n',  '<leader>gr', vim.lsp.buf.references, opts)
-        end
+  {
+    "L3MON4D3/LuaSnip",
+    version = "v2.*",
+    build = "make install_jsregexp",
+    dependencies = {
+      "saadparwaiz1/cmp_luasnip",
+      "rafamadriz/friendly-snippets",
     }
+  },
+  {
+    "hrsh7th/nvim-cmp",
+    dependencies = {
+      "hrsh7th/cmp-nvim-lsp",
+      "hrsh7th/cmp-path",
+      "hrsh7th/cmp-buffer",
+      "hrsh7th/cmp-cmdline",
+      "hrsh7th/cmp-emoji",
+      "SergioRibera/cmp-dotenv",
+      "chrisgrieser/cmp-nerdfont",
+    },
+    config = function()
+      local cmp = require'cmp'
+      cmp.setup {
+        snippet = {
+          expand = function(args)
+            require'luasnip'.lsp_expand(args.body)
+          end
+        },
+        sources = {
+          { name = "nvim_lsp", priority = 1000, },
+          { name = "luasnip", priority = 850, },
+          { name = "buffer", priority = 750, },
+          { name = "path", priority = 650, },
+          { name = "codeium", priority = 550, },
+          { name = "cmdline", priority = 450, },
+          { name = "dotenv", priority = 350, },
+          { name = "nerdfont", priority = 250, },
+          { name = "emoji", priority = 150, },
+        },
+        mapping = cmp.mapping.preset.insert({
+          ['<C-b>'] = cmp.mapping.scroll_docs(-4),
+          ['<C-f>'] = cmp.mapping.scroll_docs(4),
+          ['<C-Space>'] = cmp.mapping.complete(),
+          ['<C-e>'] = cmp.mapping.abort(),
+          ['<CR>'] = cmp.mapping.confirm({ select = false }),
+        }),
+      }
+    end
+  }
 }
