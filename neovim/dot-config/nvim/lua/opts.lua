@@ -6,9 +6,9 @@ vim.opt.number = true
 vim.opt.relativenumber = true
 
 -- Tabs and indentation
-vim.opt.tabstop = 2
-vim.opt.softtabstop = 2
-vim.opt.shiftwidth = 2
+vim.opt.tabstop = 4
+vim.opt.softtabstop = 4
+vim.opt.shiftwidth = 4
 vim.opt.expandtab = true
 
 -- Line wrap
@@ -36,7 +36,13 @@ vim.g.loaded_netrw = true
 
 -- Visible whitespace
 vim.opt.list = true
-vim.opt.listchars = { tab = ">>", space = "·", trail = "·", eol = "¬" }
+vim.opt.listchars = { tab = "> ", space = "·", trail = "·", eol = "¬" }
 
 -- Color column
 vim.opt.colorcolumn = "80"
+
+-- Insert Mode hjkl binds
+vim.keymap.set("i", "<M-h>", "<left>", {})
+vim.keymap.set("i", "<M-j>", "<down>", {})
+vim.keymap.set("i", "<M-k>", "<up>", {})
+vim.keymap.set("i", "<M-l>", "<right>", {})

@@ -8,7 +8,7 @@ return
         "nvim-tree/nvim-web-devicons",
         "MunifTanjim/nui.nvim"
     },
-	config = function()
+    config = function()
         require("neo-tree").setup({
             close_if_last_window = true,
 
@@ -27,6 +27,6 @@ return
             },
         })
 
-		vim.keymap.set("n", "<leader>b", ":Neotree toggle filesystem left<CR>", {})
-	end
+        vim.keymap.set("n", "<leader>b", ":Neotree toggle filesystem left<CR>", {})
+    end
 }
