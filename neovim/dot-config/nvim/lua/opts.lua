@@ -33,3 +33,19 @@ vim.opt.autochdir = true
 
 vim.g.loaded_netrwPlugin = true
 vim.g.loaded_netrw = true
+
+-- Visible whitespace
+vim.opt.list = true
+vim.opt.listchars = { tab = "> ", space = "·", trail = "·", eol = "¬" }
+
+-- Color column
+vim.opt.colorcolumn = "80"
+
+-- Insert Mode hjkl binds
+vim.keymap.set("i", "<M-h>", "<left>", {})
+vim.keymap.set("i", "<M-j>", "<down>", {})
+vim.keymap.set("i", "<M-k>", "<up>", {})
+vim.keymap.set("i", "<M-l>", "<right>", {})
+
+-- Make search case insensitive
+vim.opt.ignorecase = true
