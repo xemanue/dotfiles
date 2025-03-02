@@ -46,3 +46,6 @@ vim.keymap.set("i", "<M-h>", "<left>", {})
 vim.keymap.set("i", "<M-j>", "<down>", {})
 vim.keymap.set("i", "<M-k>", "<up>", {})
 vim.keymap.set("i", "<M-l>", "<right>", {})
+
+-- Make search case insensitive
+vim.opt.ignorecase = true
