@@ -1,0 +1,79 @@
+2025-03-17 13:41:20.064 [info] Extension host with pid 4466 started
+2025-03-17 13:41:20.064 [info] Skipping acquiring lock for /home/xema/.config/VSCodium/User/workspaceStorage/e06b856665f298efa382ffa0c94531ef.
+2025-03-17 13:41:20.212 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-03-17 13:41:20.225 [info] ExtensionService#_doActivateExtension cschlosser.doxdocgen, startup: false, activationEvent: 'onLanguage:c'
+2025-03-17 13:41:20.262 [info] ExtensionService#_doActivateExtension ms-vscode.cpptools, startup: false, activationEvent: 'onLanguage:c'
+2025-03-17 13:41:20.526 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-03-17 13:41:20.532 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-03-17 13:41:20.541 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2025-03-17 13:41:20.583 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2025-03-17 13:41:20.638 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-17 13:41:20.672 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-03-17 13:41:20.685 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-03-17 13:41:20.729 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-03-17 13:41:20.777 [info] Eager extensions activated
+2025-03-17 13:41:20.812 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-03-17 13:41:20.814 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-03-17 13:41:20.827 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2025-03-17 13:41:20.830 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc-icons, startup: false, activationEvent: 'onStartupFinished'
+2025-03-17 13:41:20.958 [info] Extension host terminating: renderer closed the MessagePort
+2025-03-17 13:41:20.989 [error] Error: Channel has been closed
+	at s (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:3260)
+	at Object.appendLine (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:3399)
+	at D.logOutputMessage (/opt/vscodium-bin/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:292515)
+	at D.info (/opt/vscodium-bin/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:292248)
+	at ChildProcess.<anonymous> (/opt/vscodium-bin/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:510351)
+	at ChildProcess.emit (node:events:518:28)
+	at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+2025-03-17 13:41:20.997 [error] Canceled: Canceled
+	at new dL (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:119343)
+	at jy._remoteCall (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:125638)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:122397)
+	at E0._doExecuteCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48594)
+	at E0.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48033)
+	at r.registerCommand.description (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:47297)
+	at E0._executeContributedCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:49163)
+	at E0._doExecuteCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48166)
+	at E0.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48033)
+	at Object.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:42287)
+	at SessionStateVariable.setContext (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:92550:31)
+	at SessionStateVariable.set (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:92547:21)
+	at DefaultClient.requestCompiler (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:77295:63)
+	at runNextTicks (node:internal/process/task_queues:60:5)
+	at process.processImmediate (node:internal/timers:454:9)
+	at async DefaultClient.init (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:76013:36) setContext undefined
+2025-03-17 13:41:20.997 [error] Canceled: Canceled
+	at new dL (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:119343)
+	at jy._remoteCall (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:125638)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:122397)
+	at E0._doExecuteCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48594)
+	at E0.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48033)
+	at r.registerCommand.description (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:47297)
+	at E0._executeContributedCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:49163)
+	at E0._doExecuteCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48166)
+	at E0.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48033)
+	at Object.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:42287)
+	at SessionStateVariable.setContext (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:92550:31)
+	at SessionStateVariable.set (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:92547:21)
+	at DefaultClient.requestCompiler (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:77296:64)
+	at runNextTicks (node:internal/process/task_queues:60:5)
+	at process.processImmediate (node:internal/timers:454:9)
+	at async DefaultClient.init (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:76013:36) setContext undefined
+2025-03-17 13:41:20.997 [error] Canceled: Canceled
+	at new dL (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:119343)
+	at jy._remoteCall (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:125638)
+	at s.<computed>.n.charCodeAt.s.<computed> (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:122397)
+	at E0._doExecuteCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48594)
+	at E0.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48033)
+	at r.registerCommand.description (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:47297)
+	at E0._executeContributedCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:49163)
+	at E0._doExecuteCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48166)
+	at E0.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:112:48033)
+	at Object.executeCommand (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:42287)
+	at SessionStateVariable.setContext (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:92550:31)
+	at SessionStateVariable.set (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:92547:21)
+	at DefaultClient.requestCompiler (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:77297:63)
+	at runNextTicks (node:internal/process/task_queues:60:5)
+	at process.processImmediate (node:internal/timers:454:9)
+	at async DefaultClient.init (/home/xema/.vscode-oss/extensions/ms-vscode.cpptools-1.23.6-linux-x64/dist/src/main.js:76013:36) setContext undefined
+2025-03-17 13:41:20.998 [info] Extension host with pid 4466 exiting with code 0

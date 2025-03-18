@@ -1,0 +1,30 @@
+2025-03-15 19:58:12.877 [info] Extension host with pid 6476 started
+2025-03-15 19:58:12.877 [info] Skipping acquiring lock for /home/xema/.config/VSCodium/User/workspaceStorage/e06b856665f298efa382ffa0c94531ef.
+2025-03-15 19:58:12.976 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-03-15 19:58:12.991 [info] ExtensionService#_doActivateExtension ms-vscode.cpptools, startup: false, activationEvent: 'onLanguage:cpp'
+2025-03-15 19:58:13.324 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-03-15 19:58:13.330 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-03-15 19:58:13.343 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2025-03-15 19:58:13.404 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2025-03-15 19:58:13.477 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-15 19:58:13.510 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-03-15 19:58:13.529 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-03-15 19:58:13.572 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-03-15 19:58:13.624 [info] Eager extensions activated
+2025-03-15 19:58:13.664 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-03-15 19:58:13.665 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-03-15 19:58:13.679 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2025-03-15 19:58:13.682 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc-icons, startup: false, activationEvent: 'onStartupFinished'
+2025-03-15 19:58:13.740 [info] ExtensionService#_doActivateExtension esbenp.prettier-vscode, startup: false, activationEvent: 'onStartupFinished'
+2025-03-15 20:59:41.759 [info] ExtensionService#_doActivateExtension cschlosser.doxdocgen, startup: false, activationEvent: 'onLanguage:cpp'
+2025-03-15 21:22:36.238 [warning] ms-vscode.cpptools - Code actions of kind 'quickfix' requested but returned code action is of kind 'refactor.extract.function'. Code action will be dropped. Please check 'CodeActionContext.only' to only return requested code actions.
+2025-03-16 01:55:15.460 [info] Extension host terminating: renderer closed the MessagePort
+2025-03-16 01:55:15.472 [error] Error: Channel has been closed
+	at s (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:3260)
+	at Object.appendLine (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:3399)
+	at D.logOutputMessage (/opt/vscodium-bin/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:292515)
+	at D.info (/opt/vscodium-bin/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:292248)
+	at ChildProcess.<anonymous> (/opt/vscodium-bin/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:510351)
+	at ChildProcess.emit (node:events:518:28)
+	at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+2025-03-16 01:55:15.481 [info] Extension host with pid 6476 exiting with code 0

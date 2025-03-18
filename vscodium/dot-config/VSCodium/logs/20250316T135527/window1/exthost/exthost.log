@@ -1,0 +1,70 @@
+2025-03-16 13:55:28.868 [info] Extension host with pid 1272 started
+2025-03-16 13:55:28.868 [info] Skipping acquiring lock for /home/xema/.config/VSCodium/User/workspaceStorage/e06b856665f298efa382ffa0c94531ef.
+2025-03-16 13:55:28.960 [info] ExtensionService#_doActivateExtension vscode.emmet, startup: false, activationEvent: 'onLanguage'
+2025-03-16 13:55:28.975 [info] ExtensionService#_doActivateExtension cschlosser.doxdocgen, startup: false, activationEvent: 'onLanguage:cpp'
+2025-03-16 13:55:29.011 [info] ExtensionService#_doActivateExtension ms-vscode.cpptools, startup: false, activationEvent: 'onLanguage:cpp'
+2025-03-16 13:55:29.286 [info] ExtensionService#_doActivateExtension vscode.configuration-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-03-16 13:55:29.292 [info] ExtensionService#_doActivateExtension vscode.extension-editing, startup: false, activationEvent: 'onLanguage:json'
+2025-03-16 13:55:29.300 [info] ExtensionService#_doActivateExtension vscode.json-language-features, startup: false, activationEvent: 'onLanguage:json'
+2025-03-16 13:55:29.340 [info] ExtensionService#_doActivateExtension vscode.npm, startup: false, activationEvent: 'onLanguage:json'
+2025-03-16 13:55:29.409 [info] ExtensionService#_doActivateExtension vscode.typescript-language-features, startup: false, activationEvent: 'onLanguage:jsonc'
+2025-03-16 13:55:29.452 [info] ExtensionService#_doActivateExtension vscode.git-base, startup: true, activationEvent: '*', root cause: vscode.git
+2025-03-16 13:55:29.479 [info] ExtensionService#_doActivateExtension vscode.git, startup: true, activationEvent: '*'
+2025-03-16 13:55:29.523 [info] ExtensionService#_doActivateExtension vscode.github, startup: true, activationEvent: '*'
+2025-03-16 13:55:29.562 [info] Eager extensions activated
+2025-03-16 13:55:29.592 [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch, startup: false, activationEvent: 'onStartupFinished'
+2025-03-16 13:55:29.594 [info] ExtensionService#_doActivateExtension vscode.merge-conflict, startup: false, activationEvent: 'onStartupFinished'
+2025-03-16 13:55:29.607 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc, startup: false, activationEvent: 'onStartupFinished'
+2025-03-16 13:55:29.614 [info] ExtensionService#_doActivateExtension Catppuccin.catppuccin-vsc-icons, startup: false, activationEvent: 'onStartupFinished'
+2025-03-16 18:39:55.349 [error] ExtensionError: Error in extension cschlosser.doxdocgen: FAILED to handle event
+	at Ah.value (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:40471)
+	at P._deliver (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2939)
+	at P._deliverQueue (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3030)
+	at P.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3366)
+	at FW.$acceptModelChanged (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:135:116479)
+	at jy._doInvokeHandler (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:125581)
+	at jy._invokeHandler (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:125325)
+	at jy._receiveRequest (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:124091)
+	at jy._receiveOneMessage (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:122917)
+	at Ah.value (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:121016)
+	at P._deliver (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2939)
+	at P.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3259)
+	at Qn.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:10942)
+	at Ah.value (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:14546)
+	at P._deliver (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2939)
+	at P.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3259)
+	at Qn.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:10942)
+	at MessagePortMain.<anonymous> (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:12757)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949)
+2025-03-16 21:21:08.573 [error] ExtensionError: Error in extension cschlosser.doxdocgen: FAILED to handle event
+	at Ah.value (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:172:40471)
+	at P._deliver (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2939)
+	at P._deliverQueue (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3030)
+	at P.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3366)
+	at FW.$acceptModelChanged (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:135:116479)
+	at jy._doInvokeHandler (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:125581)
+	at jy._invokeHandler (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:125325)
+	at jy._receiveRequest (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:124091)
+	at jy._receiveOneMessage (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:122917)
+	at Ah.value (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:121016)
+	at P._deliver (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2939)
+	at P.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3259)
+	at Qn.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:10942)
+	at Ah.value (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:14546)
+	at P._deliver (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:2939)
+	at P.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:27:3259)
+	at Qn.fire (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:29:10942)
+	at MessagePortMain.<anonymous> (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:190:12757)
+	at MessagePortMain.emit (node:events:518:28)
+	at MessagePortMain._internalPort.emit (node:electron/js2c/utility_init:2:2949)
+2025-03-17 00:06:14.476 [info] Extension host terminating: renderer closed the MessagePort
+2025-03-17 00:06:14.499 [error] Error: Channel has been closed
+	at s (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:3260)
+	at Object.appendLine (file:///opt/vscodium-bin/resources/app/out/vs/workbench/api/node/extensionHostProcess.js:118:3399)
+	at D.logOutputMessage (/opt/vscodium-bin/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:292515)
+	at D.info (/opt/vscodium-bin/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:292248)
+	at ChildProcess.<anonymous> (/opt/vscodium-bin/resources/app/extensions/json-language-features/client/dist/node/jsonClientMain.js:2:510351)
+	at ChildProcess.emit (node:events:518:28)
+	at ChildProcess._handle.onexit (node:internal/child_process:293:12)
+2025-03-17 00:06:14.511 [info] Extension host with pid 1272 exiting with code 0

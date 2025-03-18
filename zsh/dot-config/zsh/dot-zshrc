@@ -5,14 +5,13 @@ export ZSH="$HOME/.config/omz"
 path=("$HOME/bin" $path)
 path=("$HOME/.local/bin" $path)
 path=("$HOME/.spicetify" $path)
-path=("$HOME/Android/Sdk/platform-tools" $path)
-# path=("/usr/local/go/bin" $path)
 export PATH
 
 # Aliases
 alias clsh="echo \"\" > $HOME/.config/zsh/.zsh_history"
 alias :q="exit"
 alias ff="fastfetch"
+alias code="codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 
 # Set theme
 ZSH_THEME="typewritten"
@@ -34,10 +33,11 @@ plugins=(
 )
 
 # Autosuggestions config
-bindkey '\t' autosuggest-accept
+bindkey '^I' autosuggest-accept
 bindkey '^F' forward-word
+
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Sources
-source "$HOME/.cargo/env"     # Rust
-source "$ZSH/oh-my-zsh.sh"      # Oh My Zsh (Default)
+source "$HOME/.cargo/env"   # Rust
+source "$ZSH/oh-my-zsh.sh"  # Oh My Zsh (Default)

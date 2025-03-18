@@ -1,0 +1,4 @@
+2025-03-15 19:58:11.929 [info] update#setState disabled
+2025-03-15 19:58:11.930 [info] update#ctor - updates are disabled as there is no update URL
+2025-03-16 01:55:15.481 [info] Extension host with pid 6476 exited with code: 0, signal: unknown.
+2025-03-16 01:55:15.506 [error] Blocked vscode-file request vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/editor/common/services/editorSimpleWorkerMain.js#TextEditorWorker

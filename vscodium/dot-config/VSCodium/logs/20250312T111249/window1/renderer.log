@@ -1,0 +1,13 @@
+2025-03-12 11:12:50.268 [info] Started local extension host with pid 10703.
+2025-03-12 11:12:52.928 [info] [perf] Render performance baseline is 19ms
+2025-03-12 11:13:12.383 [error] Error: The editor could not be opened because the file was not found.
+    at Swe.handleSetInputError (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2136:138488)
+    at async Swe.setInput (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:2136:137500)
+    at async MWe.doSetInput (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:684:26129)
+    at async MWe.doOpenEditor (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:684:23883)
+    at async MWe.openEditor (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:684:22810)
+    at async vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:796:31969
+    at async Q$e.doOpenCodeEditor (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:1779:36422)
+    at async Q$e.openCodeEditor (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:1779:25154)
+    at async LGe.open (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:1841:675)
+    at async RGe.open (vscode-file://vscode-app/opt/vscodium-bin/resources/app/out/vs/workbench/workbench.desktop.main.js:1841:1968)
