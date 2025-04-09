@@ -5,6 +5,7 @@ export ZSH="$HOME/.config/omz"
 path=("$HOME/bin" $path)
 path=("$HOME/.local/bin" $path)
 path=("$HOME/.spicetify" $path)
+path=("$HOME/.pyenv/bin" $path)
 export PATH
 
 # Aliases

@@ -88,7 +88,7 @@ return {
                         if cmp.visible() then
                             cmp.abort()
                         else
-                            fallback()
+                            vim.api.nvim_feedkeys(vim.api.nvim_replace_termcodes("<C-c>", true, true, true), "n", true)
                         end
                     end, { "i", "s", "c" }),
                 })
