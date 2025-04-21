@@ -25,10 +25,10 @@ window {
     location:                    center;
     anchor:                      center;
     fullscreen:                  false;
-    width:                       252px;
+    width:                       254px;
     border-radius:               0px; /* 8px */
     cursor:                      "default";
-    background-color:            @mantle;
+    background-color:            @bg0;
 }
 
 /*****----- Main Box -----*****/
@@ -37,7 +37,8 @@ mainbox {
     spacing:                     8px;
     margin:                      0px;
     padding:                     16px;
-    border:                      0px;
+    border:                      2px;
+    border-color: @blackd;
     border-radius:               0px; /* 8px */
     background-color:            transparent;
     children:                    [ "message", "listview" ];
@@ -50,15 +51,15 @@ message {
     padding:                     8px 0px;
     border:                      0px;
     border-radius:               0px; /* 8px */
-    background-color:            @base;
-    text-color:                  @text;
+    background-color:            @bg1;
+    text-color:                  @white;
 }
 textbox {
     background-color:            inherit;
     text-color:                  inherit;
     vertical-align:              0.5;
     horizontal-align:            0.5;
-    placeholder-color:           @text;
+    placeholder-color:           @white;
     blink:                       true;
     markup:                      true;
 }
@@ -81,7 +82,7 @@ listview {
     border:                      0px;
     border-radius:               0px; /* 8px */
     background-color:            transparent;
-    text-color:                  @text;
+    text-color:                  @white;
     cursor:                      "default";
 }
 
@@ -89,8 +90,8 @@ listview {
 element {
     padding:                     23px 0px 24px;
     border-radius:               0px; /* 8px */
-    background-color:            @base;
-    text-color:                  @text;
+    background-color:            @bg1;
+    text-color:                  @white;
     cursor:                      pointer;
 }
 element-text {
@@ -102,6 +103,6 @@ element-text {
     horizontal-align:            0.5;
 }
 element selected.normal {
-    background-color:            @lavender;
-    text-color:                  @base;
+    background-color:            @orange;
+    text-color:                  @bg0;
 }

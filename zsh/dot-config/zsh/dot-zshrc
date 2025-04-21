@@ -5,7 +5,7 @@ export ZSH="$HOME/.config/omz"
 path=("$HOME/bin" $path)
 path=("$HOME/.local/bin" $path)
 path=("$HOME/.spicetify" $path)
-path=("$HOME/Android/Sdk/platform-tools" $path)
+path=("$HOME/dev/tfg/.venv/bin" $path)
 # path=("/usr/local/go/bin" $path)
 export PATH
 
@@ -13,6 +13,7 @@ export PATH
 alias clsh="echo \"\" > $HOME/.config/zsh/.zsh_history"
 alias :q="exit"
 alias ff="fastfetch"
+alias cdgr='cd "$(git rev-parse --show-toplevel)"'
 
 # Set theme
 ZSH_THEME="typewritten"

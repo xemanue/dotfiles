@@ -1,9 +1,9 @@
 // -*- mode: json -*-
 
 {
-	"layer": "bottom",
-	"position": "bottom",
-    "height": 56,
+    "layer": "bottom",
+    "position": "top",
+    "height": 48,
     "margin-top": 0,
     "margin-left": 0,
     "margin-right": 0,
@@ -13,7 +13,7 @@
     "reload_style_on_change": true,
 
 
-	"modules-left": [
+    "modules-left": [
         "network",
         "custom/separator",
         "bluetooth"
@@ -21,7 +21,7 @@
     "modules-center": [
         "hyprland/workspaces"
     ],
-	"modules-right": [
+    "modules-right": [
         "battery",
         "custom/separator",
         "backlight",
@@ -32,11 +32,11 @@
     ],
 
     "custom/separator": {
-        "format": "|",
+        "format": " ",
         "tooltip": false
     },
 
-	"hyprland/workspaces": {
+    "hyprland/workspaces": {
         "active-only": false,
         "show-special": true,
         "format": "{name}",
@@ -49,16 +49,16 @@
         "tooltip": true,
         "tooltip-connected": "{device_alias}",
     },
-	
-	"pulseaudio": {
-		"format": "  {volume:2}%",
-		"format-muted": "  MUT",
+
+    "pulseaudio": {
+        "format": "  {volume:2}%",
+        "format-muted": "  MUT",
         "tooltip": true,
         "tooltip-format": "{desc}",
-		"on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
-		"on-click-right": "pavucontrol",
+        "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
+        "on-click-right": "pavucontrol",
         "scroll-step": 2,
-	},
+    },
 
     "backlight": {
         "format": "󰃟  {percent:2}%",
@@ -74,32 +74,32 @@
         "tooltip-format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes}",
         "interval": 1,
     },
-	
-	"battery": {
-		"format": "󰁿 {capacity:2}%",
+
+    "battery": {
+        "format": "󰁿 {capacity:2}%",
         "format-charging": "󰂉 {capacity:2}%",
         "tooltip": true,
         "tooltip-format": "{timeTo}",
-	},
+    },
 
-	"clock": {
-		"format": "{:%H:%M}",
-		"tooltip": true,
-    	"tooltip-format": "{calendar}",
-    	"calendar": {
-    		"mode"          : "month",
-    		"mode-mon-col"  : 3,
-    		"weeks-pos"     : "",
-    		"on-scroll"     : 1,
-	    	"format": {
-		    	"months":     "<span color='#8caaee'><b>{}</b></span>",
-    			"days":       "<span color='#c6d0f5'><b>{}</b></span>",
-    			"weekdays":   "<span color='#babbf1'><b>{}</b></span>",
-    			"today":      "<span color='#8caaee'><b><u>{}</u></b></span>"
-	    	}
-    	},
+    "clock": {
+        "format": "{:%H:%M}",
+        "tooltip": true,
+        "tooltip-format": "{calendar}",
+        "calendar": {
+            "mode"          : "month",
+            "mode-mon-col"  : 3,
+            "weeks-pos"     : "",
+            "on-scroll"     : 1,
+            "format": {
+                "months":     "<span color='#8caaee'><b>{}</b></span>",
+                "days":       "<span color='#c6d0f5'><b>{}</b></span>",
+                "weekdays":   "<span color='#babbf1'><b>{}</b></span>",
+                "today":      "<span color='#8caaee'><b><u>{}</u></b></span>"
+            }
+        },
         "actions": {
-    	    "on-click": "mode"
+            "on-click": "mode"
         }
     }
 }
