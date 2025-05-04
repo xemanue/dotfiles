@@ -2,68 +2,64 @@
 
 *{
     width: 500;
-    font: "JetBrainsMonoNL NF SemiBold 13";
-}
-
-element-text, element-icon , mode-switcher {
-    background-color: inherit;
-    text-color:       inherit;
+    font: "Iosevkust NF SemiBold 13";
 }
 
 window {
-    padding: 0px;
-    width: 480px;
-    height: 312px;
-    border: 0px;
-    border-radius: 0px; /* 8px */
-    background-color: @mantle;
+    width: 360;
+    height: 200;
+    background-color: @crust;
 }
 
 mainbox {
-    margin: 16px;
+    margin: 8px;
     spacing: 8px;
-    padding: 0px;
-    background-color: @mantle;
+    background-color: inherit;
+}
+
+element-text, element-icon {
+    background-color: inherit;
+    text-color: inherit;
 }
 
 inputbar {
-    spacing: 8px;
-    children: [prompt, entry];
     background-color: @mantle;
-    border-radius: 0px;
+    children: [prompt, entry];
 }
 
 prompt {
-    padding: 8px 15px;
+    padding: 8px 14px 10px 15px;
     background-color: @base;
-    text-color: @lavender;
-    border-radius: 0px; /* 4px */
+    text-color: @overlay0;
 }
 
 entry {
-    padding: 8px 0px 9px 16px;
+    padding: 9px 0px 9px 16px;
     text-color: @text;
-    background-color: @base;
-    border-radius: 0px; /* 4px */
+    background-color: inherit;
+    cursor-width: 0.5em;
+    cursor-color: @overlay0;
+    blink: false;
 }
 
 listview {
-    padding: 0px;
     spacing: 8px;
     columns: 1;
     lines: 5;
-    background-color: @mantle;
+    background-color: inherit;
 }
 
 element {
-    padding: 8px 0px 9px 16px;
-    text-color: @text;
-    background-color: @base;
-    border-radius: 0px; /* 4px */
+    padding: 9px 0px 9px 16px;
+    text-color: @overlay0;
+    background-color: @mantle;
+}
+
+element-text {
+    highlight: none;
 }
 
 element selected {
-    background-color: @text;
-    text-color: @base;
-    border-radius: 0px; /* 2px */
+    background-color: @mantle;
+    text-color: @text;
 }

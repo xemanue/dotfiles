@@ -1,107 +1,70 @@
-/**
- *
- * Author : Aditya Shakya (adi1090x)
- * Github : @adi1090x
- * 
- * Rofi Theme File
- * Rofi Version: 1.7.3
- **/
-
-/*****----- Configuration -----*****/
-configuration {
-    show-icons:                 false;
-}
-
-/*****----- Global Properties -----*****/
-@import                          "../theme.rasi"
+@import "../theme.rasi"
 
 * {
-    font: "JetBrainsMonoNL NF Bold 13";
+    font: "Iosevkust NF SemiBold 13";
 }
 
-/*****----- Main Window -----*****/
+configuration {
+    show-icons: false;
+}
 
 window {
-    location:                    center;
-    anchor:                      center;
-    fullscreen:                  false;
-    width:                       252px;
-    border-radius:               0px; /* 8px */
-    cursor:                      "default";
-    background-color:            @mantle;
+    width: 184px;
+    height: 146px;
+    background-color: @crust;
 }
 
-/*****----- Main Box -----*****/
 mainbox {
-    enabled:                     true;
-    spacing:                     8px;
-    margin:                      0px;
-    padding:                     16px;
-    border:                      0px;
-    border-radius:               0px; /* 8px */
-    background-color:            transparent;
-    children:                    [ "message", "listview" ];
+    margin: 8px;
+    spacing: 8px;
+    background-color: inherit;
+    children: [ "inputbar", "listview" ];
 }
 
-/*****----- Message -----*****/
-message {
-    enabled:                     true;
-    margin:                      0px;
-    padding:                     8px 0px;
-    border:                      0px;
-    border-radius:               0px; /* 8px */
-    background-color:            @base;
-    text-color:                  @text;
-}
-textbox {
-    background-color:            inherit;
-    text-color:                  inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.5;
-    placeholder-color:           @text;
-    blink:                       true;
-    markup:                      true;
+inputbar {
+    background-color: @mantle;
+    children: [ "textbox-prompt-colon", "prompt"];
 }
 
-/*****----- Listview -----*****/
+textbox-prompt-colon {
+    expand: false;
+    padding: 8px 14px 10px 15px;
+    str: ">";
+    background-color: @base;
+    text-color: @overlay0;
+}
+
+prompt {
+    background-color: inherit;
+    vertical-align: 0.5;
+    padding: 9px 0px 9px 16px;
+    text-color: @text;
+}
+
 listview {
-    columns:                     2;
-    lines:                       1;
-    cycle:                       false;
-    dynamic:                     true;
-    scrollbar:                   false;
-    layout:                      vertical;
-    reverse:                     false;
-    fixed-height:                true;
-    fixed-columns:               true;
-    
-    spacing:                     8px;
-    margin:                      0px;
-    padding:                     0px;
-    border:                      0px;
-    border-radius:               0px; /* 8px */
-    background-color:            transparent;
-    text-color:                  @text;
-    cursor:                      "default";
+    columns: 2;
+    lines: 1;
+    cycle: false;
+    scrollbar: false;
+    spacing: 8px;
+    background-color: inherit;
 }
 
-/*****----- Elements -----*****/
 element {
-    padding:                     23px 0px 24px;
-    border-radius:               0px; /* 8px */
-    background-color:            @base;
-    text-color:                  @text;
-    cursor:                      pointer;
+    background-color: @mantle;
+    text-color: @overlay0;
+    padding: 18px 0px 19px 0px;
+    cursor: pointer;
 }
+
 element-text {
-    font:                        "Symbols Nerd Font 40";
-    background-color:            transparent;
-    text-color:                  inherit;
-    cursor:                      inherit;
-    vertical-align:              0.5;
-    horizontal-align:            0.5;
+    font: "Symbols Nerd Font 32";
+    background-color: inherit;
+    text-color: inherit;
+    cursor: inherit;
+    horizontal-align: 0.5;
 }
+
 element selected.normal {
-    background-color:            @lavender;
-    text-color:                  @base;
+    text-color: @text;
 }

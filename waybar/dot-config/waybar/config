@@ -3,7 +3,7 @@
 {
     "layer": "bottom",
     "position": "top",
-    "height": 72,
+    "height": 48,
     "margin-top": 0,
     "margin-left": 0,
     "margin-right": 0,
@@ -21,12 +21,12 @@
     ],
     "modules-right": [
         "pulseaudio",
-    "custom/separator",
-    "clock"
+        "custom/separator",
+        "clock"
     ],
 
     "custom/separator": {
-        "format": "|",
+        "format": "<span color='#737994'>|</span>",
         "tooltip": false
     },
 
@@ -36,17 +36,9 @@
         "format": "{name}",
     },
 
-    "bluetooth": {
-        "format-on": "󰂯 ON",
-        "format-off": "󰂲 OFF",
-        "format-connected": "󰂱 CON",
-        "tooltip": true,
-        "tooltip-connected": "{device_alias}",
-    },
-
     "pulseaudio": {
-        "format": "  {volume:2}%",
-        "format-muted": "  MUT",
+        "format": "<span color='#737994'>VOL</span> {volume:2}%",
+        "format-muted": "<span color='#737994'>VOL</span> MUT",
         "tooltip": true,
         "tooltip-format": "{desc}",
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
@@ -54,26 +46,14 @@
         "scroll-step": 2,
     },
 
-    "backlight": {
-        "format": "󰃟  {percent:2}%",
-        "tooltip": false,
-    },
-
     "network": {
-        "format-wifi": "  {essid}",
-        "format-ethernet": "  {ipaddr}",
-        "format-disconnected": "󰌙  DCd",
+        "format-wifi": "<span color='#737994'>NET</span> {essid}",
+        "format-ethernet": "<span color='#737994'>NET</span> {ipaddr}",
+        "format-disconnected": "<span color='#737994'>NET</span> DCd",
         "tooltip": true,
-        "tooltip-format-wifi": " {bandwidthDownBytes}  {bandwidthUpBytes}",
-        "tooltip-format-ethernet": " {bandwidthDownBytes}  {bandwidthUpBytes}",
+        "tooltip-format-wifi": "DOWN {bandwidthDownBytes} UP {bandwidthUpBytes}",
+        "tooltip-format-ethernet": "DOWN {bandwidthDownBytes} UP {bandwidthUpBytes}",
         "interval": 1,
-    },
-
-    "battery": {
-        "format": "󰁿 {capacity:2}%",
-        "format-charging": "󰂉 {capacity:2}%",
-        "tooltip": true,
-        "tooltip-format": "{timeTo}",
     },
 
     "clock": {

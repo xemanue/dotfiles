@@ -5,7 +5,7 @@ dir="$HOME/.config/rofi/styles"
 theme='pmenu'
 
 # CMDs
-uptime="`uptime -p | sed -e 's/up //g'`"
+uptime="`uptime | sed -E 's/^[^,]*up *//; s/, *[[:digit:]]* users.*//; s/([[:digit:]]+):0?([[:digit:]]+)/\1h \2m/; s/ day(s)?,/d/'`"
 host=`hostname`
 
 # Options
@@ -19,16 +19,16 @@ no=''
 # Rofi CMD
 rofi_cmd() {
 	rofi -dmenu \
-		-p "Uptime: $uptime" \
-		-mesg "Uptime: $uptime" \
+		-p "Uptime $uptime" \
+		-mesg "Uptime $uptime" \
 		-theme ${dir}/${theme}.rasi
 }
 
 # Confirmation CMD
 confirm_cmd() {
 	rofi -dmenu \
-		-p 'Confirmation' \
-		-mesg 'Are you Sure?' \
+		-p 'Confirm?' \
+		-mesg 'Confirm?' \
 		-theme ${dir}/pmenu_confirm.rasi
 }
 
