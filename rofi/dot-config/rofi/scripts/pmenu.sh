@@ -5,7 +5,7 @@ dir="$HOME/.config/rofi/styles"
 theme='pmenu'
 
 # CMDs
-uptime="`uptime | sed -E 's/^[^,]*up *//; s/, *[[:digit:]]* users.*//; s/([[:digit:]]+):0?([[:digit:]]+)/\1h \2m/; s/ day(s)?,/d/'`"
+uptime="`uptime | sed -E 's/^[^,]*up *//; s/, *[[:digit:]]* user(s)?.*//; s/ min/m/; s/([[:digit:]]+):0?([[:digit:]]+)/\1h \2m/; s/ day(s)?,/d/'`"
 host=`hostname`
 
 # Options

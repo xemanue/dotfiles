@@ -29,14 +29,75 @@
     --panel-item-hover-bgcolor: var(--surface0) !important;
     --button-hover-bgcolor: var(--surface0) !important;
   }
+  
+  #urlbar {
+    --urlbarView-separator-color: var(--surface0) !important;
+  }
+  
+  #urlbar[open][zen-floating-urlbar='true'] {
+    left: 51.05% !important;
+    width: 52rem !important;
+  }
+  
+  .urlbarView-url {
+    color: rgba(198, 208, 245, 0.75) /* var(--text) */ !important;
+  }
+  
+  .urlbarView-row {
+    color: var(--text) !important;
+    
+    &[selected] {
+      background-color: var(--surface0) !important;
+
+      & .urlbarView-favicon {
+        fill: var(--text) !important;
+        background-color: rgba(198, 208, 245, 0.25) !important;
+      }
+    }
+  }
+  
+  /* Hide container icon on sidebar*/
+  #zen-current-workspace-indicator-container {
+    display: none !important;
+  }
+
+  /* Hide tab close icon */
+  .tab-close-button {
+      display: none !important;
+  }
+  
+  @-moz-document url-prefix("chrome:") {
+    /* Rounded statusbar */
+    #statuspanel {
+      margin: 10px !important;
+    }
+    
+    #statuspanel-label {
+      color: var(--text) !important;
+      padding: 2px 8px !important;
+      border: 1px solid var(--zen-colors-border) !important;
+      background: var(--zen-colors-tertiary) !important;
+    }
+  
+    /* Disable rounded corners */
+    :root {
+      --zen-webview-border-radius: 0;
+      #tabbrowser-tabpanels:not([zen-split-view="true"]) {
+        padding-left: 0px !important;
+        padding-right: 0px !important;
+      }
+    }
+  }
+  
+  
+  #urlbar[popover-open] {
+    background-color: #ff0000;
+  }
+
 
   #tabbrowser-tabs {
     --tab-selected-bgcolor: var(--surface1) !important;
     --tab-hover-background-color: var(--surface0) !important;
-  }
-
-  #permissions-granted-icon{
-    color: var(--base) !important;
   }
 
   .sidebar-placesTree {
@@ -58,10 +119,6 @@
   .content-shortcuts {
     background-color: var(--base) !important;
     border-color: var(--text) !important;
-  }
-
-  .urlbarView-url {
-    color: var(--text) !important;
   }
 
   #zenEditBookmarkPanelFaviconContainer {
