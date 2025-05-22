@@ -1,5 +1,34 @@
 return {
     {
+        "folke/flash.nvim",
+        event = "VeryLazy",
+        -- @type Flash.Config
+        opts = {
+            modes = {
+                char = {
+                    enabled = false,
+                },
+            },
+        },
+        -- stylua: ignore
+        keys = {
+            { "f", mode = { "n", "x", "o" }, function() require("flash").jump() end, desc = "Flash" },
+            { "<c-f>", mode = { "c" }, function() require("flash").toggle() end, desc = "Toggle Flash Search" },
+        },
+    },
+    {
+        "lukas-reineke/indent-blankline.nvim",
+        main = "ibl",
+        ---@module "ibl"
+        ---@type ibl.config
+        opts = {},
+    },
+    {
+        "folke/ts-comments.nvim",
+        event = "VeryLazy",
+        opts = {},
+    },
+    {
         "neovim/nvim-lspconfig",
         config = function()
             require("cmp").setup {
@@ -106,5 +135,33 @@ return {
     },
     {
         "onsails/lspkind.nvim"
+    },
+    {
+        "echasnovski/mini.pairs",
+        events = "VeryLazy",
+        opts = {
+            modes = { insert = true, command = true, terminal = false },
+            skip_next = [=[[%w%%%'%[%"%.%`%$]]=],
+            skip_ts = { "string" },
+            skip_unbalanced = true,
+            markdown = true,
+        },
+    },
+    {
+        "kylechui/nvim-surround",
+        event = "VeryLazy",
+        opts = {},
+    },
+    {
+        "nvim-treesitter/nvim-treesitter",
+        build = ":TSUpdate",
+        opts = {
+            ensure_installed = { "bash", "c", "cpp", "css", "html", "json", "lua",
+            "markdown", "markdown_inline", "python", "rasi",
+            "ron", "rust", "toml", "vim", "vimdoc", "query" },
+            sync_install = false,
+            highlight = { enable = true },
+            indent = { enable = true },
+        },
     }
 }

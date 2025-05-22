@@ -37,7 +37,7 @@
     }
 
     .search-wrapper .logo-and-wordmark .logo {
-      background: url("zen-logo-macchiato.svg"), url("https://raw.githubusercontent.com/IAmJafeth/zen-browser/main/themes/Macchiato/Lavender/zen-logo-frappe.svg") no-repeat center !important;
+      background: url("zen-logo-frappe.svg"), url("https://raw.githubusercontent.com/IAmJafeth/zen-browser/main/themes/Macchiato/Lavender/zen-logo-frappe.svg") no-repeat center !important;
       display: inline-block !important;
       height: 82px !important;
       width: 82px !important;
