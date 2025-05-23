@@ -75,10 +75,10 @@ return {
                 enabled = true,
                 preset = {
                     header = [[
-                    ▗▖  ▗▖▗▞▀▚▖ ▄▄▄  ▄   ▄ ▄ ▄▄▄▄ 
-                    ▐▛▚▖▐▌▐▛▀▀▘█   █ █   █ ▄ █ █ █
-                    ▐▌ ▝▜▌▝▚▄▄▖▀▄▄▄▀  ▀▄▀  █ █   █
-                    ▐▌  ▐▌                 █      ]],
+▗▖  ▗▖▗▞▀▚▖ ▄▄▄  ▄   ▄ ▄ ▄▄▄▄ 
+▐▛▚▖▐▌▐▛▀▀▘█   █ █   █ ▄ █ █ █
+▐▌ ▝▜▌▝▚▄▄▖▀▄▄▄▀  ▀▄▀  █ █   █
+▐▌  ▐▌                 █      ]],
                     keys = {
                         { icon = "󰈈 ", key = "-", desc = "View Files", action = ":Oil --float" },
                         { icon = " ", key = "n", desc = "New File", action = ":ene | startinsert" },
