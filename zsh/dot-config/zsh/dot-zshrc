@@ -7,15 +7,15 @@ path=("$HOME/.local/bin" $path)
 path=("$HOME/.spicetify" $path)
 export PATH
 
+# General
+
 # Aliases
-
-## Disable omz's defaults for git
-zstyle ':omz:plugins:git' aliases no
-
-## General
 alias clsh="echo \"\" > $HOME/.config/zsh/.zsh_history"
 alias :q="exit"
 alias ff="fastfetch"
+
+## Disable omz's defaults for git
+zstyle ':omz:plugins:git' aliases no
 
 ## Git
 alias gs="git status"
