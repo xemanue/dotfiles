@@ -1,8 +1,0 @@
-{
-    "files.associations": {
-        "cstdint": "cpp",
-        "lcd_menu.h": "c",
-        "cstring": "c",
-        "variant": "c"
-    }
-}

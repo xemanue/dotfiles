@@ -1,5 +1,0 @@
-2025-03-15 20:59:40.636 [info] Getting Manifest... cschlosser.doxdocgen
-2025-03-15 20:59:40.746 [info] Installing extension: cschlosser.doxdocgen {"isMachineScoped":false,"installPreReleaseVersion":false,"pinned":false,"profileLocation":{"$mid":1,"external":"vscode-userdata:/home/xema/.vscode-oss/extensions/extensions.json","path":"/home/xema/.vscode-oss/extensions/extensions.json","scheme":"vscode-userdata"},"isApplicationScoped":false,"productVersion":{"version":"1.98.1","date":"2025-03-11T18:23:08.826Z"}}
-2025-03-15 20:59:41.680 [info] Extracted extension to file:///home/xema/.vscode-oss/extensions/cschlosser.doxdocgen-1.4.0: cschlosser.doxdocgen
-2025-03-15 20:59:41.698 [info] Renamed to /home/xema/.vscode-oss/extensions/cschlosser.doxdocgen-1.4.0
-2025-03-15 20:59:41.712 [info] Extension installed successfully: cschlosser.doxdocgen vscode-userdata:/home/xema/.vscode-oss/extensions/extensions.json

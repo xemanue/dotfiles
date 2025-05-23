@@ -1,0 +1,17 @@
+antfu.icons-carbon
+catppuccin.catppuccin-vsc
+catppuccin.catppuccin-vsc-icons
+cschlosser.doxdocgen
+formulahendry.code-runner
+ms-python.debugpy
+ms-python.python
+ms-toolsai.jupyter
+ms-toolsai.jupyter-keymap
+ms-toolsai.jupyter-renderers
+ms-toolsai.vscode-jupyter-cell-tags
+ms-toolsai.vscode-jupyter-slideshow
+ms-vscode.cpptools
+navernoedenis.gruvbox-material-icons
+platformio.platformio-ide
+sainnhe.gruvbox-material
+vscodevim.vim

@@ -8,12 +8,17 @@ path=("$HOME/.spicetify" $path)
 export PATH
 
 # Aliases
+
+## Disable omz's defaults for git
+zstyle ':omz:plugins:git' aliases no
+
+## General
 alias clsh="echo \"\" > $HOME/.config/zsh/.zsh_history"
 alias :q="exit"
 alias ff="fastfetch"
-alias codium="codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
 
-alias gs="git status --short"
+## Git
+alias gs="git status"
 alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
 alias gds="git diff --staged"
 alias ga="git add"
@@ -21,16 +26,16 @@ alias gap="git add --patch"
 alias gc="git commit"
 alias gp="git push"
 alias gu="git pull"
-alias gl="git log"
+alias gl="git log --graph --all --pretty=format:'%C(cyan)%h %C(brightwhite)%an %C(brightblack)%ar %C(auto) %D%n%s%n'"
 alias gb="git branch"
 alias gco="git checkout"
 alias gi="git init"
 alias gcl="git clone"
 
-# Set theme
+# Theme
 ZSH_THEME="typewritten"
 
-# Theme config
+## Config
 TYPEWRITTEN_PROMPT_LAYOUT="singleline"
 TYPEWRITTEN_SYMBOL=">"
 TYPEWRITTEN_ARROW_SYMBOL=">"
@@ -46,7 +51,7 @@ plugins=(
 	zsh-syntax-highlighting
 )
 
-# Autosuggestions config
+## Config
 bindkey '^I' autosuggest-accept
 bindkey '^F' forward-word
 
