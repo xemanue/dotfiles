@@ -6,4 +6,4 @@ This is a collection of the configurations I use daily. They are only guaranteed
 
 1. Clone this repo into your home directory.
 2. `cd` into it.
-3. Run `stow --dotfiles --no-folding` for the config folder you want to use. It will automatically get symlinked in the appropiate folder (usually .config)
+3. Run `stow --dotfiles --no-folding` for the config folder you want to use. It will automatically get symlinked to the appropiate folder (usually .config)
