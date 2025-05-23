@@ -5,14 +5,27 @@ export ZSH="$HOME/.config/omz"
 path=("$HOME/bin" $path)
 path=("$HOME/.local/bin" $path)
 path=("$HOME/.spicetify" $path)
-path=("$HOME/.pyenv/bin" $path)
 export PATH
 
 # Aliases
 alias clsh="echo \"\" > $HOME/.config/zsh/.zsh_history"
 alias :q="exit"
 alias ff="fastfetch"
-alias code="codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
+alias codium="codium --enable-features=UseOzonePlatform,WaylandWindowDecorations --ozone-platform=wayland"
+
+alias gs="git status --short"
+alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
+alias gds="git diff --staged"
+alias ga="git add"
+alias gap="git add --patch"
+alias gc="git commit"
+alias gp="git push"
+alias gu="git pull"
+alias gl="git log"
+alias gb="git branch"
+alias gco="git checkout"
+alias gi="git init"
+alias gcl="git clone"
 
 # Set theme
 ZSH_THEME="typewritten"

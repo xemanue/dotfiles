@@ -1,0 +1,14 @@
+#!/usr/bin/env bash
+
+tag="volume"
+
+wpctl set-volume @DEFAULT_AUDIO_SINK@ "$@"
+
+volume="$(echo $(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $2}')*100 | bc | cut -d '.' -f 1)"
+mute="$(wpctl get-volume @DEFAULT_AUDIO_SINK@ | awk '{print $3}')"
+
+if [[ "$mute" =~ "[MUTED]" || $volume == 0 ]]; then
+    dunstify -a "vol" -u low -h string:x-dunst-stack-tag:$tag -h int:value:0 "VOL MUT"
+else
+    dunstify -a "vol" -u low -h string:x-dunst-stack-tag:$tag -h int:value:"$volume" "VOL ${volume}%"
+fi
