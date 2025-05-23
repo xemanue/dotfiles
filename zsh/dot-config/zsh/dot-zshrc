@@ -52,9 +52,8 @@ plugins=(
 )
 
 ## Config
-bindkey '^I' autosuggest-accept
+bindkey '^ ' autosuggest-accept # '^I' for TAB
 bindkey '^F' forward-word
-
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Sources

@@ -1,0 +1,70 @@
+[user]
+    name = xemanue
+    email = josemanuel@garciacazorla.es
+    signingkey = B872EF046672A0CF
+
+[core]
+    whitespace = error
+    pager = diff-so-fancy | less --tabs=4 -RF
+
+[url "git@github.com:xemanue/"]
+    insteadOf = "x:"
+
+[url "git@github.com:"]
+    insteadOf = "gh:"
+
+[init]
+    defaultBranch = "main"
+
+[status]
+    branch = true
+    showStash = true
+
+[diff]
+    context = 3
+    renames = copies
+    interHunkContext = 10
+
+[diff-so-fancy]
+    markEmptyLines = false
+
+[color "diff"]
+    meta = blue bold
+    frag = cyan
+    context = white
+    whitespace = yellow reverse
+    old = red
+
+[interactive]
+    singlekey = true
+
+[push]
+    autoSetupRemote = true
+    default = current
+
+[log]
+    abbrevCommit = true
+    graphColors = blue, cyan, green, yellow, magenta, red
+
+[color "decorate"]
+    HEAD = red
+    branch = magenta
+    tag = magenta
+    remoteBranch = blue
+
+[color "branch"]
+    current = magenta
+    local = default
+    remote = blue
+    upstream = green
+    plain = yellow
+
+[branch]
+    sort = -committerdate
+
+[tag]
+    sort = -taggerdate
+
+[pager]
+    branch = false
+    tag = false
