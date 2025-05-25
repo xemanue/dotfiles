@@ -13,6 +13,7 @@ export PATH
 alias clsh="echo \"\" > $HOME/.config/zsh/.zsh_history"
 alias :q="exit"
 alias ff="fastfetch"
+alias nvim-mine="NVIM_APPNAME=nvim-mine nvim"
 
 ## Disable omz's defaults for git
 zstyle ':omz:plugins:git' aliases no
