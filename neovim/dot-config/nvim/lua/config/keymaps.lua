@@ -43,13 +43,11 @@ vim.keymap.set("v", ">", ">gv", { noremap = true, silent = true })
 -- Don't replace clipboard stuff
 vim.keymap.set("v", "p", '"_dP', { noremap = true, silent = true })
 vim.keymap.set({ "n", "v" }, "d", '"_d')
+vim.keymap.set({ "n", "v" }, "s", '"_s')
 vim.keymap.set("n", "x", '"_x', { noremap = true, silent = true })
 
 -- Format
 vim.keymap.set({ "n", "v" }, "<leader>=", vim.lsp.buf.format)
-
--- Disable weird command window
-vim.keymap.set("n", "Q", "<nop>")
 
 -- Replace word under cursor
 vim.keymap.set("n", "<leader>s", [[:%s/\<<C-r><C-w>\>/<C-r><C-w>/gI<Left><Left><Left>]])

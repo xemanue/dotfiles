@@ -24,7 +24,7 @@ return {
             bufdelete = { enabled = true },
             indent = { enabled = true },
             lazygit = { enabled = true },
-            notifier = { enabled = true },
+            notifier = { enabled = false},
             picker = { -- Background: SnacksNormal / SnacksPicker
                 enabled = true,
                 prompt = "> ",
