@@ -9,4 +9,16 @@ configuration {
     display-clipboard: ">";
     sidebar-mode: false;
     cycle: false;
+
+    // Unbind the keys I'll use
+    kb-remove-char-back: "BackSpace,Shift+BackSpace";
+    kb-accept-entry: "Control+m,Return,KP_Enter";
+    kb-remove-to-eol: "";
+    kb-mode-complete: "";
+   
+    // Vim-like navigation
+    kb-row-left: "Control+h";
+    kb-row-down: "Control+j";
+    kb-row-up: "Control+k";
+    kb-row-right: "Control+l";
 }
