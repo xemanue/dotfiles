@@ -28,7 +28,7 @@ inputbar {
 }
 
 prompt {
-    padding: 8px 14px 10px 15px;
+    padding: 9px 15px;
     background-color: @base;
     text-color: @overlay0;
 }

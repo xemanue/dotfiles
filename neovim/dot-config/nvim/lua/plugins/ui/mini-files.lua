@@ -44,6 +44,7 @@ return {
             if close_on_file then
                 desc = desc .. " and close"
             end
+
             vim.keymap.set("n", lhs, rhs, { buffer = buf_id, desc = desc })
         end
 

@@ -42,6 +42,7 @@ vim.opt.splitbelow = true
 vim.opt.splitkeep = "screen"
 
 -- Files
+vim.opt.autochdir = true
 vim.opt.confirm = true -- Confirm to save changes before exiting modified buffer
 vim.opt.grepprg = "rg --vimgrep"
 vim.opt.swapfile = false

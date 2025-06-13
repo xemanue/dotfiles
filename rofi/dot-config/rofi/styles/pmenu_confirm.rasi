@@ -28,8 +28,8 @@ inputbar {
 
 textbox-prompt-colon {
     expand: false;
-    padding: 8px 14px 10px 15px;
-    str: ">";
+    padding: 9px 15px;
+    str: "";
     background-color: @base;
     text-color: @overlay0;
 }

@@ -5,8 +5,8 @@ configuration {
     drun-display-format: "{name}";
     disable-history: false;
     hide-scrollbar: true;
-    display-drun: ">";
-    display-clipboard: ">";
+    display-drun: "";
+    display-clipboard: "";
     sidebar-mode: false;
     cycle: false;
 
