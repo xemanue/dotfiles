@@ -2,13 +2,12 @@
     "workbench.iconTheme": "catppuccin-frappe",
     "workbench.colorTheme": "Catppuccin Frappé",
     "editor.fontSize": 16,
-    "editor.fontFamily": "'JetBrainsMonoNL NF'",
+    "editor.fontFamily": "'Iosevkust NF'",
     "editor.renderWhitespace": "all",
-    "editor.cursorStyle": "block",
     "editor.wordWrap": "bounded",
     "editor.minimap.maxColumn": 80,
     "editor.scrollbar.horizontal": "hidden",
-    "editor.scrollbar.vertical": "hidden",
+    "editor.scrollbar.vertical": "visible",
     "editor.minimap.renderCharacters": false,
     "editor.cursorBlinking": "solid",
     "editor.cursorSmoothCaretAnimation": "on",
@@ -18,5 +17,19 @@
     "editor.roundedSelection": false,
     "workbench.productIconTheme": "icons-carbon",
     "chat.commandCenter.enabled": false,
-    "C_Cpp.copilotHover": "disabled"
+    "C_Cpp.copilotHover": "disabled",
+    "window.customTitleBarVisibility": "auto",
+    "window.menuBarVisibility": "toggle",
+    "workbench.sideBar.location": "right",
+    "workbench.activityBar.location": "top",
+    "workbench.navigationControl.enabled": false,
+    "workbench.layoutControl.enabled": false,
+    "window.commandCenter": false,
+    "code-runner.executorMapByGlob": {
+        "*.c": "cd $dir && gcc -o $fileNameWithoutExt *.c && ./$fileNameWithoutExt",
+        "pom.xml": "cd $dir && mvn clean package"
+    },
+    "editor.minimap.showSlider": "always",
+    "workbench.startupEditor": "none",
+    "update.showReleaseNotes": false
 }

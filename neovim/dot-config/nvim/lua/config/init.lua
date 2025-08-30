@@ -1,8 +1,3 @@
-local M = {}
-
-local defaults = {
-	colorscheme = "catppuccin",
-	defaults = {
-		keymaps = true,
-	},
-}
+require("config.options")
+require("config.keymaps")
+require("config.lazy")

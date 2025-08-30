@@ -36,6 +36,10 @@
       background-color: #00000000 !important;
     }
 
+    .personalizeButtonWrapper {
+        color: var(--text) !important;
+    }
+
     .search-wrapper .logo-and-wordmark .logo {
       background: url("zen-logo-frappe.svg"), url("https://raw.githubusercontent.com/IAmJafeth/zen-browser/main/themes/Macchiato/Lavender/zen-logo-frappe.svg") no-repeat center !important;
       display: inline-block !important;

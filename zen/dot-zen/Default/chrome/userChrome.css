@@ -33,11 +33,13 @@
   #urlbar {
     --urlbarView-separator-color: var(--surface0) !important;
   }
-  
+ 
+  /*
   #urlbar[open][zen-floating-urlbar='true'] {
-    left: 51.05% !important;
-    width: 52rem !important;
+    left: 50% !important;
+    width: 55rem !important;
   }
+  */
   
   .urlbarView-url {
     color: rgba(198, 208, 245, 0.75) /* var(--text) */ !important;

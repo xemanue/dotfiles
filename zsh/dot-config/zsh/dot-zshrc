@@ -1,24 +1,24 @@
 # Path to your oh-my-zsh installation.
 export ZSH="$HOME/.config/omz"
 
-# PATH
+# Global variables
 path=("$HOME/bin" $path)
 path=("$HOME/.local/bin" $path)
 path=("$HOME/.spicetify" $path)
 export PATH
 
-# General
+export MANPAGER="nvim +Man!"
+
+eval "$(zoxide init zsh)"
 
 # Aliases
 alias clsh="echo \"\" > $HOME/.config/zsh/.zsh_history"
 alias :q="exit"
 alias ff="fastfetch"
-alias nvim-mine="NVIM_APPNAME=nvim-mine nvim"
+alias lazyvim="NVIM_APPNAME=lazyvim nvim"
 
-## Disable omz's defaults for git
-zstyle ':omz:plugins:git' aliases no
+zstyle ':omz:plugins:git' aliases no  # Disable omz's defaults for git
 
-## Git
 alias gs="git status"
 alias gd="git diff --output-indicator-new=' ' --output-indicator-old=' '"
 alias gds="git diff --staged"
@@ -32,14 +32,14 @@ alias gb="git branch"
 alias gco="git checkout"
 alias gi="git init"
 alias gcl="git clone"
+alias gr='if [ "`git rev-parse --show-cdup`" != "" ]; then cd `git rev-parse --show-cdup`; fi'
 
 # Theme
 ZSH_THEME="typewritten"
 
-## Config
 TYPEWRITTEN_PROMPT_LAYOUT="singleline"
-TYPEWRITTEN_SYMBOL=">"
-TYPEWRITTEN_ARROW_SYMBOL=">"
+TYPEWRITTEN_SYMBOL=""
+TYPEWRITTEN_ARROW_SYMBOL=" "
 TYPEWRITTEN_RELATIVE_PATH="adaptive"
 TYPEWRITTEN_RELATIVE_PATH="adaptive"
 TYPEWRITTEN_CURSOR="terminal"
@@ -52,9 +52,9 @@ plugins=(
 	zsh-syntax-highlighting
 )
 
-## Config
-bindkey '^ ' autosuggest-accept # '^I' for TAB
-bindkey '^F' forward-word
+# Binds
+bindkey -rp ''
+
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Sources

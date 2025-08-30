@@ -1,0 +1,11 @@
+#!/usr/bin/env bash
+
+tag="brightness"
+
+brightness="$(echo "((((($(brightnessctl g)*100)/852)+2)/5)*5)$@5" | bc)"
+
+if [[ !("$@" == *- && $(echo "$(brightnessctl g)-1" | bc) -lt 43) ]]; then
+    brightnessctl s ${brightness}%
+fi
+
+dunstify -a "bri" -u low -h string:x-dunst-stack-tag:$tag -h int:value:"$brightness" "BRI ${brightness}%"

@@ -301,6 +301,12 @@ appname = "vol"
 history_ignore = yes
 format = "<span font_desc='Iosevkust NF SemiBold 13'>%s</span>"
 
+[brightness]
+appname = "bri"
+history_ignore = yes
+format = "<span font_desc='Iosevkust NF SemiBold 13'>%s</span>"
+
+
 # SCRIPTING
 # You can specify a script that gets run when the rule matches by
 # setting the "script" option.

@@ -15,15 +15,46 @@
 
     "modules-left": [
         "network",
+        "custom/separator",
+        "bluetooth",
     ],
     "modules-center": [
         "hyprland/workspaces"
     ],
     "modules-right": [
+        "battery",
+        "custom/separator",
+        "backlight",
+        "custom/separator",
         "pulseaudio",
         "custom/separator",
         "clock"
     ],
+
+    "bluetooth": {
+        "format-on": "<span color='#737994'>BLU</span> ON",
+        "format-off": "<span color='#737994'>BLU</span> OFF",
+        "format-disabled": "<span color='#737994'>BLU</span> OFF",
+        "format-connected": "<span color='#737994'>BLU</span> CON",
+        "format-no-controller": "<span color='#737994'>BLU</span> NOC",
+        "tooltip": true,
+        "tooltip-connected": "{device_alias}",
+        "on-click-right": "blueman-manager"
+    },
+
+    "backlight": {
+        "format": "<span color='#737994'>BRI</span> {percent:2}%",
+        "tooltip": false,
+        "on-scroll-up": "~/.local/bin/bri +",
+        "on-scroll-down": "~/.local/bin/bri -",
+    },
+
+    "battery": {
+        "format": "<span color='#737994'>BAT</span> {capacity:2}%",
+        "format-charging": "<span color='#737994'>BAT</span> {capacity:2}%",
+        "tooltip": true,
+        "tooltip-format": "{timeTo}",
+    },
 
     "custom/separator": {
         "format": "<span color='#737994'>|</span>",
@@ -43,6 +74,8 @@
         "tooltip-format": "{desc}",
         "on-click": "pactl set-sink-mute @DEFAULT_SINK@ toggle",
         "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.local/bin/vol 2%+",
+        "on-scroll-down": "~/.local/bin/vol 2%-",
         "scroll-step": 2,
     },
 
