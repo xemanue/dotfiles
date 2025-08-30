@@ -10,7 +10,7 @@
 [url "git@github.com:xemanue/"]
     insteadOf = "x:"
 
-[url "git@github.com:"]
+[url "https://github.com/"]
     insteadOf = "gh:"
 
 [init]
