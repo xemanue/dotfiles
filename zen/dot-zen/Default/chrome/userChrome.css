@@ -57,7 +57,7 @@
   }
   
   /* Hide container icon on sidebar*/
-  #zen-current-workspace-indicator-container {
+  .zen-current-workspace-indicator {
     display: none !important;
   }
 

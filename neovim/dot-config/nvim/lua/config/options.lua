@@ -1,7 +1,7 @@
 -- Line numbers
 vim.opt.number = true
 vim.opt.relativenumber = true
-vim.signcolumn = "yes"
+vim.opt.signcolumn = "yes"
 
 -- Line highlight
 vim.opt.cursorline = true
@@ -56,6 +56,7 @@ vim.opt.background = "dark"
 -- Bar
 vim.opt.showmode = false
 vim.opt.ruler = false
+vim.opt.cmdheight = 0
 
 -- Time
 vim.opt.updatetime = 200
@@ -63,3 +64,6 @@ vim.opt.timeoutlen = 500
 
 -- Mouse
 vim.opt.mouse = "a"
+
+-- Misc
+-- vim.opt.conceallevel = 1

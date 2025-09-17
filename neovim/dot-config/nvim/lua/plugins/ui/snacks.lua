@@ -1,8 +1,3 @@
-local close_explorer = function()
-    local explorer = require("mini.files")
-    if not explorer.open() then explorer.close() end
-end
-
 return {
     "folke/snacks.nvim",
     priority = 1000,
@@ -35,18 +30,9 @@ return {
                 }
             },
         },
-        scroll = { enabled = true },
+        scroll = { enabled = false },
     },
     keys = {
-        { "M", function() require("snacks").bufdelete() end, desc = "Close current buffer" },
-
-        { "<leader>gl", function() require("snacks").lazygit() end, desc = "Open Lazygit" },
-
-        { "<leader>ff", function() close_explorer() require("snacks").picker.files(opts) end },
-        { "<leader>fg", function() close_explorer() require("snacks").picker.grep(opts) end },
-        { "<leader>fr", function() close_explorer() require("snacks").picker.recent(opts) end },
-        { "<leader>fm", function() close_explorer() require("snacks").picker.marks(opts) end },
-        { "<leader>fh", function() close_explorer() require("snacks").picker.highlights(opts) end },
-        { "<leader>fc", function() close_explorer() require("snacks").picker.command_history(opts) end },
+        { "C", function() Snacks.bufdelete() end, desc = "[C]lose current buffer" },
     },
 }

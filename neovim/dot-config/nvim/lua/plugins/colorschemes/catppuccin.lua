@@ -12,9 +12,6 @@ return {
             })
 
             vim.cmd("colorscheme catppuccin")
-
-            -- Custom highlight groups
-            vim.api.nvim_set_hl(0, "NormalFloat", { fg = "#C6D0F6", bg = "#303447"})
         end,
     },
 }
