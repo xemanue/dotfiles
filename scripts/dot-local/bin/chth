@@ -48,7 +48,7 @@ killall -s USR1 kitty
 # spicetify config color_scheme catppuccin-$theme && spicetify apply > /dev/null
 
 # Neovim
-sed -i --follow-symlinks 's,flavour = ".*",flavour = "'$theme'",' ~/.config/nvim/lua/plugins/catppuccin.lua
+sed -i --follow-symlinks 's,flavour = ".*",flavour = "'$theme'",' ~/.config/nvim/lua/plugins/colorschemes/catppuccin.lua
 
 # Zen
 sed -i --follow-symlinks 's,^\@import "themes/.*\.css";$,@import "themes/'$theme'.css";,' ~/.zen/Default/chrome/theme.css
