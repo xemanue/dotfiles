@@ -1,0 +1,31 @@
+{
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 16,
+    "mode": "dock",
+    "reload_style_on_change": true,
+
+    "modules-left": [
+        "group/power",
+        "custom/separator",
+        "network"
+    ],
+    "modules-center": [
+        "niri/workspaces"
+    ],
+    "modules-right": [
+        "group/pulseaudio",
+        "custom/separator",
+        "clock"
+    ],
+
+    "include": [
+        "~/.config/waybar/modules/custom/separator.jsonc",
+        "~/.config/waybar/modules/custom/power.jsonc",
+        "~/.config/waybar/modules/niri/workspaces.jsonc",
+        "~/.config/waybar/modules/pulseaudio.jsonc",
+        "~/.config/waybar/modules/network.jsonc",
+        "~/.config/waybar/modules/clock.jsonc"
+    ]
+}
