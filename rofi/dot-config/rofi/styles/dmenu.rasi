@@ -30,7 +30,7 @@ inputbar {
 prompt {
     padding: 9px 15px;
     background-color: @base;
-    text-color: @overlay0;
+    text-color: @lavender;
 }
 
 entry {

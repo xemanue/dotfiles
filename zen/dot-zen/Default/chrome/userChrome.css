@@ -1,6 +1,11 @@
 @media {
-    /* Hide container icon on sidebar*/
+    /* Hide container icon on sidebar */
     .zen-current-workspace-indicator {
+        visibility: collapse !important;
+    }
+    
+    /* Hide pinned tabs separator */
+    .zen-workspace-pinned-tabs-section {
         visibility: collapse !important;
     }
 

@@ -8,8 +8,8 @@
     },
 
     "pulseaudio#output": {
-        "format": "{icon} {volume}%",
-        "format-muted": "{icon} {volume}%",
+        "format": "<span color='#6c7086'>{icon}</span> {volume}%",
+        "format-muted": "<span color='#6c7086'>{icon}</span> {volume}%",
         "format-icons": {
             "default": [ "󰕿", "󰖀", "󰕾" ],
             "default-muted": "󰝟",
@@ -21,6 +21,7 @@
         "min-length": 7,
         "max-length": 7,
         "on-click": "~/.local/bin/volume.sh output mute",
+        "on-click-right": "pavucontrol",
         "on-scroll-up": "~/.local/bin/volume.sh output raise",
         "on-scroll-down": "~/.local/bin/volume.sh output lower",
         "tooltip-format": "<b>Output Device</b>: {desc}"
@@ -28,11 +29,12 @@
 
     "pulseaudio#input": {
         "format": "{format_source}",
-        "format-source": "󰍬 {volume}%",
-        "format-source-muted": "󰍭 {volume}%",
+        "format-source": "<span color='#6c7086'>󰍬</span> {volume}%",
+        "format-source-muted": "<span color='#6c7086'>󰍭</span> {volume}%",
         "min-length": 7,
         "max-length": 7,
         "on-click": "~/.local/bin/volume.sh input mute",
+        "on-click-right": "pavucontrol",
         "on-scroll-up": "~/.local/bin/volume.sh input raise",
         "on-scroll-down": "~/.local/bin/volume.sh input lower",
         "tooltip-format": "<b>Input Device</b>: {desc}"

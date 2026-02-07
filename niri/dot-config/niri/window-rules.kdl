@@ -1,7 +1,7 @@
-window-rule {
-    exclude app-id="org.wezfurlong.wezterm"
-    open-maximized true
-}
+// window-rule {
+//     exclude app-id="org.wezfurlong.wezterm"
+//     open-maximized true
+// }
 
 window-rule {
     match app-id="zen" title="Picture-in-Picture"

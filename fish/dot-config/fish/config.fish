@@ -1,5 +1,3 @@
-# source /usr/share/cachyos-fish-config/cachyos-config.fish
-
 function fish_greeting
     fastfetch
 end
@@ -15,9 +13,6 @@ if test -d ~/.local/bin
     end
 end
 
-## Env variables
-set -gx MANGOHUD 1
-
 ## Aliases
 # Eza
 alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
@@ -25,7 +20,8 @@ alias la='eza -a --color=always --group-directories-first --icons' # all files a
 alias ll='eza -l --color=always --group-directories-first --icons' # long format
 alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
 alias l.="eza -a | grep -e '^\.'" # show only dotfiles
-
+alias ff="fastfetch"
+alias clear="clear && fastfetch"
 alias :q="exit"
 
 ## Functions
@@ -70,9 +66,4 @@ bind alt-\; accept-autosuggestion
 bind ctrl-h __fish_man_page
 bind ctrl-f pager-toggle-search
 
-
-# overwrite greeting
-# potentially disabling fastfetch
-#function fish_greeting
-#    # smth smth
-#end
+starship init fish | source

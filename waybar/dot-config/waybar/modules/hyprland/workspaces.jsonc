@@ -1,0 +1,7 @@
+{
+    "hyprland/workspaces": {
+        "format": "{name}",
+        "cursor": true,
+        "show-special": true
+    }
+}

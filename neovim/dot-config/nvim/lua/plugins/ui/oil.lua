@@ -37,8 +37,8 @@ return {
             }
         })
 
-        vim.api.nvim_set_hl(0, "NormalFloat", { fg = "#C6D0F6", bg = "#303447"})
-        vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#8CAAEF", bg = "#303447"})
-        vim.api.nvim_set_hl(0, "FloatTitle", { fg = "#303447", bg = "#8CAAEF"})
+        vim.api.nvim_set_hl(0, "NormalFloat", { fg = "#cdd6f4", bg = "#1e1e2e"})
+        vim.api.nvim_set_hl(0, "FloatBorder", { fg = "#89b4fa", bg = "#1e1e2e"})
+        vim.api.nvim_set_hl(0, "FloatTitle", { fg = "#1e1e2e", bg = "#89b4fa"})
     end
 }

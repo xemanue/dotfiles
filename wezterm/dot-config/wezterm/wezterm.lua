@@ -6,12 +6,17 @@ local config = wezterm.config_builder()
 
 local act = wezterm.action
 
-config.font = wezterm.font 'Iosevkust'
+config.font = wezterm.font_with_fallback ({
+    { family = "Iosevkust" },
+    { family = "Symbols Nerd Font Mono", scale = 0.75 }
+})
 config.font_size = 13
+config.allow_square_glyphs_to_overflow_width = "Never"
 
 config.adjust_window_size_when_changing_font_size = false
 config.animation_fps = 30
 config.audible_bell = "Disabled"
+
 -- cell_widths might be good for nerd font
 config.color_scheme = "Catppuccin Mocha"
 config.cursor_blink_rate = 500
@@ -33,12 +38,12 @@ config.keys = {
         action = act.AttachDomain 'unix',
     },
     {
-        key = 'v',
+        key = 'b',
         mods = 'LEADER',
         action = act.SplitVertical { domain = 'CurrentPaneDomain' },
     },
     {
-        key = 'b',
+        key = 'v',
         mods = 'LEADER',
         action = act.SplitHorizontal { domain = 'CurrentPaneDomain' },
     },
@@ -129,7 +134,7 @@ wezterm.on(
         local foreground = '#a6adc8'
 
         if tab.is_active then
-            background = '#f38ba8'
+            background = '#b4befe'
             foreground = '#11111b'
         elseif hover then
             background = '#313244'

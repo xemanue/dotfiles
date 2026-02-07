@@ -1,25 +1,7 @@
 {
-    "group/power": {
-        "orientation": "horizontal",
-        "modules": [
-            "custom/power#off",
-            "custom/power#reset",
-            "custom/power#sleep"
-        ],
-        "drawer": {
-            "transition-left-to-right": true
-        }
-    },
-    "custom/power#off": {
+    "custom/power": {
         "format": "⏻",
-        "on-click": "systemctl poweroff"
-    },
-    "custom/power#reset": {
-        "format": "",
-        "on-click": "systemctl reboot"
-    },
-    "custom/power#sleep": {
-        "format": "",
-        "on-click": "systemctl suspend"
+        "on-click": "~/.config/rofi/scripts/pmenu.sh",
+        "tooltip-format": "Power menu..."
     }
 }

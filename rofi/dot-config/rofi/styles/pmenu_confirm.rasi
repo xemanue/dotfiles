@@ -31,7 +31,7 @@ textbox-prompt-colon {
     padding: 9px 15px;
     str: "";
     background-color: @base;
-    text-color: @overlay0;
+    text-color: @lavender;
 }
 
 prompt {

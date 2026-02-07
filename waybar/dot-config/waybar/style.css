@@ -1,6 +1,73 @@
 @import "themes/mocha.css";
 
-@import "styles/global.css";
-@import "styles/modules-right.css";
-@import "styles/modules-center.css";
-@import "styles/modules-left.css";
+
+/* ----- Global ----- */
+
+* {
+    font-size: 15px;
+    font-family: "Iosevkust NF SemiBold";
+}
+
+window#waybar {
+    background: transparent;
+    color: @crust;
+}
+
+/* ----- Left ----- */
+
+.modules-left {
+    margin-left: 0.75rem;
+}
+
+#workspaces button {
+    color: @base;
+    margin: -0.25rem;
+}
+
+#workspaces button:hover {
+    color: @surface0;
+
+    /* Make sure no other hover effects are applied */
+
+    background: transparent;
+    border-color: transparent;
+    box-shadow: none;
+    text-shadow: none;
+}
+
+#workspaces button.active {
+    color: @overlay0;
+}
+
+
+/* ----- Right ----- */
+
+.modules-right{
+    margin-right: 1.25rem;
+}
+
+#pulseaudio {
+    margin: 0rem 0rem 0rem -0.25rem;
+}
+
+#custom-power {
+    margin: 0 0.5rem 1px 0;
+}
+
+#custom-separator {
+    color: @overlay0;
+    background: transparent;
+}
+
+
+/* ----- Tooltips ----- */
+
+tooltip {
+    border: 1px solid @surface0;
+    border-radius: 8px;
+    background-color: @mantle;
+}
+
+tooltip > box {
+    padding: 8px;
+}
