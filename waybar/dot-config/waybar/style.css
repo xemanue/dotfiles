@@ -10,7 +10,7 @@
 
 window#waybar {
     background: transparent;
-    color: @crust;
+    color: @text;
 }
 
 /* ----- Left ----- */
@@ -20,12 +20,12 @@ window#waybar {
 }
 
 #workspaces button {
-    color: @base;
+    color: @overlay0;
     margin: -0.25rem;
 }
 
 #workspaces button:hover {
-    color: @surface0;
+    color: @surface2;
 
     /* Make sure no other hover effects are applied */
 
@@ -36,7 +36,7 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @overlay0;
+    color: @text;
 }
 
 
@@ -46,12 +46,28 @@ window#waybar {
     margin-right: 1.25rem;
 }
 
+#network:hover {
+    color: @subtext0;
+}
+
 #pulseaudio {
     margin: 0rem 0rem 0rem -0.25rem;
 }
 
+#pulseaudio label:hover {
+    color: @subtext0;
+}
+
+#clock:hover {
+    color: @subtext0;
+}
+
 #custom-power {
     margin: 0 0.5rem 1px 0;
+}
+
+#custom-power:hover {
+    color: @subtext0;
 }
 
 #custom-separator {
@@ -66,6 +82,7 @@ tooltip {
     border: 1px solid @surface0;
     border-radius: 8px;
     background-color: @mantle;
+    color: @text;
 }
 
 tooltip > box {

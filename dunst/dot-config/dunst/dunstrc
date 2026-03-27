@@ -29,7 +29,7 @@
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    offset = (8, 8)
+    offset = (8, 0)
 
     # Maximum number of notification (0 means no limit)
     notification_limit = 4
@@ -183,7 +183,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 0   # 4
+    corner_radius = 8   # 4
 
     # Define which corners to round when drawing the window. If the corner radius
     # is set to 0 this option will be ignored.
