@@ -1,3 +1,5 @@
+source ~/.config/fish/binds.fish
+
 function fish_greeting
     fastfetch
 end
@@ -5,6 +7,9 @@ end
 # Format man pages
 set -x MANROFFOPT "-c"
 set -x MANPAGER "nvim +Man!"
+
+# Enable MangoHud
+set -x MANGOHUD 1
 
 # Add ~/.local/bin to PATH
 if test -d ~/.local/bin
@@ -15,11 +20,11 @@ end
 
 ## Aliases
 # Eza
-alias ls='eza -al --color=always --group-directories-first --icons' # preferred listing
-alias la='eza -a --color=always --group-directories-first --icons' # all files and dirs
-alias ll='eza -l --color=always --group-directories-first --icons' # long format
-alias lt='eza -aT --color=always --group-directories-first --icons' # tree listing
-alias l.="eza -a | grep -e '^\.'" # show only dotfiles
+alias ls='eza -al --icons --color=always --group-directories-first' # preferred listing
+alias la='eza -a --icons --color=always --group-directories-first' # all files and dirs
+alias ll='eza --icons -l --color=always --group-directories-first' # long format
+alias lt='eza --icons -aT --color=always --group-directories-first' # tree listing
+alias l.="eza --icons -a --color=always --group-directories-first | grep -e '^\.'" # show only dotfiles
 alias ff="fastfetch"
 alias clear="clear && fastfetch"
 alias :q="exit"
@@ -57,13 +62,5 @@ end
 function bak --argument filename
     cp $filename $filename.bak
 end
-
-## Binds
-bind alt-l complete
-bind alt-h complete-and-search
-bind alt-\; accept-autosuggestion
-
-bind ctrl-h __fish_man_page
-bind ctrl-f pager-toggle-search
 
 starship init fish | source

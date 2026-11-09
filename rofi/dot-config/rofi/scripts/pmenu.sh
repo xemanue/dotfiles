@@ -52,7 +52,7 @@ run_cmd() {
         elif [[ $1 == '--sleep' ]]; then
             systemctl suspend
         elif [[ $1 == '--logout' ]]; then
-            hyprctl dispatch exit
+            niri msg action quit --skip-confirmation
         fi
     else
         exit 0

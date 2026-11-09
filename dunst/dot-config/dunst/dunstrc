@@ -1,10 +1,10 @@
 [global]
     
     ### Theme ###
-    background = "#1e1e2e"
-    foreground = "#cdd6f4"
-    frame_color = "#313244"
-    highlight = "#a6e3a1, #f9e2af, #f38ba8"
+    background = "#181818"
+    foreground = "#d4be98"
+    frame_color = "#7c6f64"
+    highlight = "#a9b665, #d8a657, #ea6962"
 
     ### Display ###
 
@@ -17,7 +17,7 @@
     # dynamic width from 0 to 300
     # width = (0, 300)
     # constant width of 300
-    width = (240, 360)
+    width = (0, 360)
 
     # The height of a single notification, excluding the frame.
     # dynamic height from 0 to 300
@@ -29,7 +29,7 @@
     # Offset from the origin
     # NOTE: Dunst from version 1.11 and older use this alternative notation
     # offset = 10x50
-    offset = (8, 0)
+    offset = (14, 14)
 
     # Maximum number of notification (0 means no limit)
     notification_limit = 4
@@ -128,7 +128,7 @@
     #   %n  progress value if set without any extra characters
     #   %%  Literal %
     # Markup is allowed
-    format = "<span font_desc='Iosevkust NF Bold 13'>%s</span>\n<span font_desc='Iosevkust NF SemiBold 11'>%a</span>"
+    format = "<span font_desc='Iosevkust NF SemiBold 13'>%s</span>\n<span font_desc='Iosevkust NF Bold 11'>%a</span>\n<span font_desc='Iosevkust NF 11'>%b</span>"
 
     # Ignore newlines '\n' in notifications.
     ignore_newline = no
@@ -140,7 +140,7 @@
     hide_duplicate_count = false
 
     # Display indicators for URLs (U) and actions (A).
-    show_indicators = no
+    show_indicators = yes
 
     ### Icons ###
 
@@ -164,7 +164,7 @@
     ### Misc/Advanced ###
 
     # dmenu path.
-    dmenu = /usr/bin/dmenu -p dunst:
+    dmenu = /usr/bin/rofi -dmenu -p "" -config ".config/rofi/config.rasi" -theme ".config/rofi/styles/dmenu.rasi"
 
     # Browser for opening urls in context menu.
     browser = /usr/bin/xdg-open
@@ -183,7 +183,7 @@
     # corners.
     # The radius will be automatically lowered if it exceeds half of the
     # notification height to avoid clipping text and/or icons.
-    corner_radius = 8   # 4
+    corner_radius = 0   # 8
 
     # Define which corners to round when drawing the window. If the corner radius
     # is set to 0 this option will be ignored.
@@ -235,9 +235,9 @@
     # * context_all: Open context menu for all notifications.
     # These values can be strung together for each mouse event, and
     # will be executed in sequence.
-    mouse_left_click = close_current
-    mouse_middle_click = do_action, close_current
-    mouse_right_click = close_all
+    mouse_left_click = context, do_action, open_url
+    mouse_middle_click = close_current
+    mouse_right_click = none
 
 # Experimental features that may or may not work correctly. Do not expect them
 # to have a consistent behaviour across releases.
@@ -297,9 +297,9 @@
 # override_pause_level = X
 
 [volume]
-appname = "vol"
+appname = "System"
 history_ignore = yes
-format = "<span font_desc='Iosevkust NF SemiBold 13'>%s</span>"
+format = "<span font_desc='Iosevkust NF SemiBold 13'>%s</span>\n<span font_desc='Iosevkust NF Bold 11'>%a</span>"
 
 # SCRIPTING
 # You can specify a script that gets run when the rule matches by

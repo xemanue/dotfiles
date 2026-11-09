@@ -1,12 +1,10 @@
-include "window-rules.kdl"
-
 // █▀▀ ▀▄▀ █▀▀ █▀▀ █▀ //
 // ██▄ █ █ ██▄ █▄▄ ▄█ //
 
 spawn-at-startup "waybar"
-spawn-at-startup "/usr/lib/policykit-1-pantheon/io.elementary.desktop.agent-polkit"
+spawn-at-startup "awww-daemon"
+spawn-at-startup "/usr/lib/soteria-polkit/soteria"
 
-spawn-sh-at-startup "wl-paste --watch cliphist store"
 
 input {
     mod-key "Super"
@@ -26,7 +24,12 @@ input {
         accel-profile "flat"
     }
 
-    warp-mouse-to-focus
+    touchpad {
+        tap
+        natural-scroll
+        scroll-factor 0.25
+    }
+
     focus-follows-mouse
     disable-power-key-handling
 }
@@ -39,7 +42,14 @@ output "DP-3" {
 }
 
 layout {
-    gaps 16
+    gaps 8
+
+    struts {
+        left 8
+        right 8
+        top 8
+        bottom 8
+    }
 
     center-focused-column "never" // Va duro de cojones ponerlo a "always"
 
@@ -52,35 +62,51 @@ layout {
     default-column-width { proportion 0.5; }
 
     focus-ring {
+        off
+
         width 2
 
-        // active-color
-        active-gradient from="#f38ba8" to="#eba0ac" angle=135
-        inactive-gradient from="#505050" to="#808080" angle=45 relative-to="workspace-view"
+        active-color "#e78a4e"
+        // active-gradient from="#e78a4e" to="#d8a657" angle=45
+        // inactive-gradient from="#7c6f64" to="#928374" angle=45 relative-to="workspace-view"
     }
 
     border {
-        off
+      on
+
+      width 1
+
+      active-color "#ff8080"
+      inactive-color "#2a2a32"
+    }
+
+    tab-indicator {
+      width 4
+      length total-proportion=0.25
+      place-within-column
+
+      gap 8 // if using focus-ring, gap - focus-ring = actual gap
+      gaps-between-tabs 4
     }
 
     shadow {
-        // on
-        softness 30
+        on
+        softness 5
         spread 5
-        offset x=0 y=5
-        color "#0007"
-    }
-
-    struts {
-        left 16
-        right 16
-        // top 32
-        // bottom 32
+        offset x=0 y=0
+        color "#0005"
     }
 }
 
-// To run a shell command (with variables, pipes, etc.), use spawn-sh-at-startup:
-// spawn-sh-at-startup "qs -c ~/source/qs/MyAwesomeShell"
+overview {
+    backdrop-color "#181818"
+}
+ 
+gestures {
+    hot-corners {
+        off
+    }
+}
 
 hotkey-overlay {
     skip-at-startup
@@ -91,7 +117,7 @@ prefer-no-csd
 // You can change the path where screenshots are saved.
 // A ~ at the front will be expanded to the home directory.
 // The path is formatted with strftime(3) to give you the screenshot date and time.
-screenshot-path "~/Pictures/Screenshots/Screenshot from %Y-%m-%d %H-%M-%S.png"
+screenshot-path "~/pictures/screenshots/screenshot_%Y-%m-%d %H-%M-%S.png"
 
 // You can also set this to null to disable saving screenshots to disk.
 // screenshot-path null
@@ -114,67 +140,66 @@ window-rule {
     // since this is the default config, and we want no false positives.
     // You can get away with just app-id="wezterm" if you want.
     match app-id=r#"^org\.wezfurlong\.wezterm$"#
-    default-column-width {}
+    default-column-width { }
 }
 
-// Open the Firefox picture-in-picture player as floating by default.
+// Thunar rename
 window-rule {
-    // This app-id regular expression will work for both:
-    // - host Firefox (app-id is "firefox")
-    // - Flatpak Firefox (app-id is "org.mozilla.firefox")
-    match app-id=r#"firefox$"# title="^Picture-in-Picture$"
+    match app-id="Thunar" title="Rename.*"
+
     open-floating true
+    default-column-width { fixed 360; }
+    default-window-height { fixed 120; }
 }
 
-// Example: block out two password managers from screen capture.
-// (This example rule is commented out with a "/-" in front.)
-/-window-rule {
-    match app-id=r#"^org\.keepassxc\.KeePassXC$"#
-    match app-id=r#"^org\.gnome\.World\.Secrets$"#
-
-    block-out-from "screen-capture"
-
-    // Use this instead if you want them visible on third-party screenshot tools.
-    // block-out-from "screencast"
-}
-
-// Enable rounded corners
 window-rule {
-    geometry-corner-radius 4
-    clip-to-geometry true
+    match app-id="thunar" title="Rename.*"
+
+    open-floating true
+    default-column-width { fixed 360; }
+    default-window-height { fixed 120; }
 }
+
+// Polkit window
+window-rule {
+    match app-id="xfce-polkit"
+
+    open-floating true
+    default-column-width { fixed 480; }
+    default-window-height { fixed 240; }
+}
+
+// PiP
+window-rule {
+    match app-id="" title="^Picture in picture$"
+
+    open-floating true
+    default-column-width { fixed 384; }
+    default-window-height { fixed 216; }
+    default-floating-position x=16 y=16 relative-to="bottom-right"
+}
+
 
 binds {
     Mod+Shift+P { spawn-sh "killall -SIGUSR2 waybar"; }
-    // Keys consist of modifiers separated by + signs, followed by an XKB key name
-    // in the end. To find an XKB name for a particular key, you may use a program
-    // like wev.
-    //
-    // "Mod" is a special modifier equal to Super when running on a TTY, and to Alt
-    // when running as a winit window.
-    //
-    // Most actions that you can bind here can also be invoked programmatically with
-    // `niri msg action do-something`.
-
-    // Mod-Shift-/, which is usually the same as Mod-?,
-    // shows a list of important hotkeys.
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return hotkey-overlay-title="Open a Terminal: WezTerm" { spawn "wezterm"; }
-    Mod+D hotkey-overlay-title="Run an Application: rofi" { spawn-sh "rofi -show drun"; }
+    Mod+Return hotkey-overlay-title="Open WezTerm" { spawn "wezterm"; }
 
-    // Using spawn-sh allows to pass multiple arguments together with the command.
-    XF86AudioRaiseVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1+"; }
-    XF86AudioLowerVolume allow-when-locked=true { spawn-sh "wpctl set-volume @DEFAULT_AUDIO_SINK@ 0.1-"; }
-    XF86AudioMute        allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle"; }
-    XF86AudioMicMute     allow-when-locked=true { spawn-sh "wpctl set-mute @DEFAULT_AUDIO_SOURCE@ toggle"; }
+    Mod+D hotkey-overlay-title="Open Rofi" {
+        spawn-sh "rofi -show drun -config '.config/rofi/config.rasi' -theme '.config/rofi/styles/dmenu.rasi'";
+    }
 
-    // Open/close the Overview: a zoomed-out view of workspaces and windows.
-    // You can also move the mouse into the top-left hot corner,
-    // or do a four-finger swipe up on a touchpad.
+    // Keyboard volume control
+    XF86AudioRaiseVolume allow-when-locked=true {
+        spawn-sh "./.local/bin/volume.sh output raise";
+    }
+    XF86AudioLowerVolume allow-when-locked=true {
+        spawn-sh "./.local/bin/volume.sh output lower";
+    }
+
     Mod+Tab repeat=false { toggle-overview; }
-
     Mod+Q repeat=false { close-window; }
 
     Mod+H { focus-column-left; }
@@ -182,16 +207,10 @@ binds {
     Mod+K { focus-window-or-workspace-up; }
     Mod+L { focus-column-right; }
 
-    Mod+U              { focus-workspace-down; }
-    Mod+I              { focus-workspace-up; }
-    
     Mod+Shift+H { move-column-left; }
-    // Mod+Shift+J { move-window-down; }
-    // Mod+Shift+K { move-window-up; }
+    Mod+Shift+J { move-window-down-or-to-workspace-down; }
+    Mod+Shift+K { move-window-up-or-to-workspace-up; }
     Mod+Shift+L { move-column-right; }
-
-    Mod+Shift+J         { move-window-down-or-to-workspace-down; }
-    Mod+Shift+K         { move-window-up-or-to-workspace-up; }
 
     Mod+1 { focus-workspace 1; }
     Mod+2 { focus-workspace 2; }
@@ -215,74 +234,34 @@ binds {
     Mod+Shift+N { consume-or-expel-window-left; }
     Mod+Shift+M { consume-or-expel-window-right; }
 
-    Mod+N { consume-window-into-column; }
-    Mod+M { expel-window-from-column; }
-
     Mod+R { switch-preset-column-width; }
+    Mod+Shift+R { expand-column-to-available-width; }
 
     Mod+F { maximize-column; }
     Mod+Shift+F { fullscreen-window; }
 
-    // Expand the focused column to space not taken up by other fully visible columns.
-    // Makes the column "fill the rest of the space".
     Mod+Shift+C { center-column; }
-    Mod+Shift+X { expand-column-to-available-width; }
 
-
-    // Center all fully visible columns on screen.
-    // Mod+Shift+C { center-visible-columns; }
-
-    // Finer width adjustments.
-    // This command can also:
-    // * set width in pixels: "1000"
-    // * adjust width in pixels: "-5" or "+5"
-    // * set width as a percentage of screen width: "25%"
-    // * adjust width as a percentage of screen width: "-10%" or "+10%"
-    // Pixel sizes use logical, or scaled, pixels. I.e. on an output with scale 2.0,
-    // set-column-width "100" will make the column occupy 200 physical screen pixels.
     Mod+Minus { set-column-width "-10%"; }
     Mod+Equal { set-column-width "+10%"; }
 
-    // Finer height adjustments when in column with other windows.
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
-    // Move the focused window between the floating and the tiling layout.
-    Mod+Space { toggle-window-floating; }
-    Mod+Shift+Space { switch-focus-between-floating-and-tiling; }
+    Mod+Shift+Space { toggle-window-floating; }
+    Mod+Space { switch-focus-between-floating-and-tiling; }
 
-    // Toggle tabbed column display mode.
-    // Windows in this column will appear as vertical tabs,
-    // rather than stacked on top of each other.
     Mod+W { toggle-column-tabbed-display; }
 
-    // Actions to switch layouts.
-    // Note: if you uncomment these, make sure you do NOT have
-    // a matching layout switch hotkey configured in xkb options above.
-    // Having both at once on the same hotkey will break the switching,
-    // since it will switch twice upon pressing the hotkey (once by xkb, once by niri).
-    // Mod+Space       { switch-layout "next"; }
-    // Mod+Shift+Space { switch-layout "prev"; }
+    Mod+S { screenshot; }
 
-    Print { screenshot; }
-    Ctrl+Print { screenshot-screen; }
-    Alt+Print { screenshot-window; }
+    Mod+Escape hotkey-overlay-title="Open Power menu" {
+        spawn-sh "./.config/rofi/scripts/pmenu.sh";
+    }
 
-    // Applications such as remote-desktop clients and software KVM switches may
-    // request that niri stops processing the keyboard shortcuts defined here
-    // so they may, for example, forward the key presses as-is to a remote machine.
-    // It's a good idea to bind an escape hatch to toggle the inhibitor,
-    // so a buggy application can't hold your session hostage.
-    //
-    // The allow-inhibiting=false property can be applied to other binds as well,
-    // which ensures niri always processes them, even when an inhibitor is active.
-    Mod+Escape allow-inhibiting=false { toggle-keyboard-shortcuts-inhibit; }
+    Mod+Shift+Escape allow-inhibiting=false {
+      toggle-keyboard-shortcuts-inhibit;
+    }
 
-    // The quit action will show a confirmation dialog to avoid accidental exits.
-    Mod+Shift+E { quit; }
-    Ctrl+Alt+Delete { quit; }
-
-    // Powers off the monitors. To turn them back on, do any input like
-    // moving the mouse or pressing any other key.
-    // Mod+Shift+P { power-off-monitors; }
+    Mod+F1 { power-off-monitors; }
 }

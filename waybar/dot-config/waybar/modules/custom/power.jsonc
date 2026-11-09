@@ -1,7 +1,0 @@
-{
-    "custom/power": {
-        "format": "⏻",
-        "on-click": "~/.config/rofi/scripts/pmenu.sh",
-        "tooltip-format": "Power menu..."
-    }
-}

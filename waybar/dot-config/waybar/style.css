@@ -1,31 +1,51 @@
-@import "themes/mocha.css";
+@import "themes/gruvbox-mdm.css";
 
-
-/* ----- Global ----- */
+/*=============================================================================
+== Global
+=============================================================================*/
 
 * {
     font-size: 15px;
-    font-family: "Iosevkust NF SemiBold";
+    font-family: "Iosevkust NFM";
 }
 
 window#waybar {
-    background: transparent;
-    color: @text;
+    background: @bg0;
+    color: @fg0;
 }
 
-/* ----- Left ----- */
+tooltip {
+    border: 2px solid @orange;
+    border-radius: 0px;
+    background: @bg0;
+    color: @fg0;
+}
+
+tooltip > box {
+    padding: 8px;
+}
+
+
+/*=============================================================================
+== Left
+=============================================================================*/
+
+/* Fixes grey weird grey box that appears when changing margins */
+window box box widget box button {
+    background: @bg0;
+}
 
 .modules-left {
-    margin-left: 0.75rem;
+    margin-left: 12px;
 }
 
 #workspaces button {
-    color: @overlay0;
-    margin: -0.25rem;
+    color: @grey0;
+    padding: 0px 0px;
 }
 
 #workspaces button:hover {
-    color: @surface2;
+    color: @grey2;
 
     /* Make sure no other hover effects are applied */
 
@@ -36,55 +56,34 @@ window#waybar {
 }
 
 #workspaces button.active {
-    color: @text;
+    color: @orange;
 }
 
 
-/* ----- Right ----- */
+/*=============================================================================
+== Right
+=============================================================================*/
 
-.modules-right{
-    margin-right: 1.25rem;
+.modules-right {
+    margin-right: 20px;
 }
 
-#network:hover {
-    color: @subtext0;
+#custom-separator {
+    color: @grey0;
+    padding: 0px 16px;
+}
+
+#network:hover,
+#pulseaudio label:hover,
+#clock:hover,
+#custom-power:hover {
+    color: @grey2;
 }
 
 #pulseaudio {
     margin: 0rem 0rem 0rem -0.25rem;
 }
 
-#pulseaudio label:hover {
-    color: @subtext0;
-}
-
-#clock:hover {
-    color: @subtext0;
-}
-
 #custom-power {
     margin: 0 0.5rem 1px 0;
-}
-
-#custom-power:hover {
-    color: @subtext0;
-}
-
-#custom-separator {
-    color: @overlay0;
-    background: transparent;
-}
-
-
-/* ----- Tooltips ----- */
-
-tooltip {
-    border: 1px solid @surface0;
-    border-radius: 8px;
-    background-color: @mantle;
-    color: @text;
-}
-
-tooltip > box {
-    padding: 8px;
 }
