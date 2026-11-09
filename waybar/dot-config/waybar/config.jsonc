@@ -41,9 +41,9 @@
     // Clock
     
     "clock": {
-        "format": "{:%H:%M}",
-        "min-length": 5,
-        "max-length": 5,
+        "format": "<span color='#383840'>TIM</span> {:%H:%M}",
+        "min-length": 9,
+        "max-length": 9,
         "tooltip-format": "{calendar}",
         "calendar": {
             "mode": "month",
@@ -52,7 +52,7 @@
                 "months": "<span alpha='100%'><b>{}</b></span>",
                 "days": "<span alpha='90%'>{}</span>",
                 "weekdays": "<span alpha='80%'>{}</span>",
-                "today": "<span alpha='100%' color='#7c6f64'><b>{}</b></span>"
+                "today": "<span alpha='100%' color='#383840'><b>{}</b></span>"
             }
         },
         "actions": {
@@ -63,18 +63,21 @@
 
 
     // Network
+    //
+    // For icons: font='18' rise='-2400'
+    // "󰤯" "󰤮"
 
     "network": {
         "interval": 10,
-        "format-ethernet": "󰈀",
-        "format-wifi": "<span color='#7c6f64'>{icon}</span> {signalStrength}%",
-        "format-disconnected": "󰤯",
-        "format-disabled": "󰤮",
+        "format-ethernet": "<span color='#383840'>ETH</span>",
+        "format-wifi": "<span color='#383840'>NET</span> {signalStrength}%",
+        "format-disconnected": "<span color='#383840'>NET</span> null",
+        "format-disabled": "<span color='#383840'>NET</span> disc",
         "format-icons": [
             "󰤟", "󰤢", "󰤥", "󰤨"
         ],
-        "min-length": 6,
-        "max-length": 6,
+        "min-length": 7,
+        "max-length": 7,
         "tooltip-format": "<b>Gateway</b>: {gwaddr}",
         "tooltip-format-ethernet": "<b>Interface</b>: {ifname}",
         "tooltip-format-wifi": "<b>Network</b>: {essid}\n<b>IP Addr</b>: {ipaddr}/{cidr}\n<b>Strength</b>: {signalStrength}%\n<b>Frequency</b>: {frequency} GHz",
@@ -85,18 +88,21 @@
 
 
     // Audio
+    //
+    // For icons: font='14' rise='-400'
+    //  font='18' rise='-2600'
 
     "group/pulseaudio": {
-        "orientation": "horizontal",
+      "orientation": "horizontal",
         "modules": [
-            "pulseaudio#output",
-            "pulseaudio#input"
-        ]
+          "pulseaudio#output",
+          "pulseaudio#input"
+         ]
     },
 
     "pulseaudio#output": {
-        "format": "<span color='#7c6f64'>{icon}</span> {volume}%",
-        "format-muted": "<span color='#7c6f64'>{icon}</span> {volume}%",
+        "format": "<span color='#383840'>VOL</span> {volume}%",
+        "format-muted": "<span color='#383840'>VOL</span> mut",
         "format-icons": {
             "default": [ "󰕿", "󰖀", "󰕾" ],
             "default-muted": "󰝟",
@@ -105,8 +111,8 @@
             "headset": "󰋎",
             "headset-muted": "󰋐"
         },
-        "min-length": 7,
-        "max-length": 7,
+        "min-length": 8,
+        "max-length": 8,
         "on-click": "~/.local/bin/volume.sh output mute",
         "on-click-right": "pavucontrol",
         "on-scroll-up": "~/.local/bin/volume.sh output raise",
@@ -116,16 +122,19 @@
     },
 
     "tray": {
-      "icon-size":16,
+      "icon-size": 14,
       "spacing": 8
     },
 
+    //  font='12' rise='240'
+    //  font='16' rise='-1800'
+
     "pulseaudio#input": {
         "format": "{format_source}",
-        "format-source": "<span color='#7c6f64'>󰍬</span> {volume}%",
-        "format-source-muted": "<span color='#7c6f64'>󰍭</span> {volume}%",
-        "min-length": 7,
-        "max-length": 7,
+        "format-source": "<span color='#383840'>MIC</span> {volume}%",
+        "format-source-muted": "<span color='#383840'>MIC</span> mut",
+        "min-length": 8,
+        "max-length": 8,
         "on-click": "~/.local/bin/volume.sh input mute",
         "on-click-right": "pavucontrol",
         "on-scroll-up": "~/.local/bin/volume.sh input raise",
@@ -136,9 +145,11 @@
 
 
     // Power menu
+    //
+    // font='18' rise='800'
     
     "custom/power": {
-        "format": "⏻",
+        "format": "<span>PWR</span>",
         "on-click": "~/.config/rofi/scripts/pmenu.sh",
         "tooltip-format": "Power menu...",
         "cursor": true
@@ -150,6 +161,5 @@
     "custom/separator": {
         "format": "|",
         "tooltip": false,
-        "cursor": false
     }
 }

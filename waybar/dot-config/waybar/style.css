@@ -1,4 +1,4 @@
-@import "themes/gruvbox-mdm.css";
+@import "themes/mfd-mono.css";
 
 /*=============================================================================
 == Global
@@ -10,15 +10,15 @@
 }
 
 window#waybar {
-    background: @bg0;
-    color: @fg0;
+    background: @bg;
+    color: @fg;
 }
 
 tooltip {
-    border: 2px solid @orange;
+    border: 1px solid @border;
     border-radius: 0px;
-    background: @bg0;
-    color: @fg0;
+    background: @bg;
+    color: @fg;
 }
 
 tooltip > box {
@@ -32,20 +32,21 @@ tooltip > box {
 
 /* Fixes grey weird grey box that appears when changing margins */
 window box box widget box button {
-    background: @bg0;
+    background: @bg;
 }
 
 .modules-left {
-    margin-left: 12px;
+    margin-left: 15px;
 }
 
 #workspaces button {
-    color: @grey0;
+    color: @dim;
     padding: 0px 0px;
+    margin-left: -1em;
 }
 
 #workspaces button:hover {
-    color: @grey2;
+    /* color: @fg; */
 
     /* Make sure no other hover effects are applied */
 
@@ -56,7 +57,8 @@ window box box widget box button {
 }
 
 #workspaces button.active {
-    color: @orange;
+    color: @red;
+    font-weight: normal;
 }
 
 
@@ -65,25 +67,26 @@ window box box widget box button {
 =============================================================================*/
 
 .modules-right {
-    margin-right: 20px;
+  margin-right: 20px;
 }
 
 #custom-separator {
-    color: @grey0;
-    padding: 0px 16px;
+  color: @dim;
+  padding: 0px 16px;
 }
 
 #network:hover,
 #pulseaudio label:hover,
 #clock:hover,
 #custom-power:hover {
-    color: @grey2;
+  /* color: @fg; */
 }
 
 #pulseaudio {
-    margin: 0rem 0rem 0rem -0.25rem;
+  margin: 0rem 0rem 0rem 0rem;
 }
 
 #custom-power {
-    margin: 0 0.5rem 1px 0;
+  color: @red;
+  /* margin: 0 0.5rem 1px 0; */
 }
