@@ -1,0 +1,11 @@
+* {
+  red: #FF8080;
+  bg: #08080C;
+  fg: #D0D0D8;
+  bright: #F0F0FF;
+  dim: #383840;
+  visual: #1A1A22;
+  cursor: #121216;
+  border: #2A2A32;
+  float-bg: #0D0D11;
+}
