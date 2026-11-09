@@ -180,7 +180,7 @@ table.insert(plugins, {
       accesibility_contrast = 10
     })
 
-    vim.cmd.colorscheme('mfd-mono')
+    vim.cmd.colorscheme('x-mfd-mono')
   end
 })
 
@@ -282,7 +282,7 @@ table.insert(plugins, {
       },
       completion = {
         list = { max_items = 5 },
-        documentation = { window = { border = "single" } },
+        documentation = { auto_show = true, window = { border = "single" } },
       },
       cmdline = {
         keymap = { preset = "inherit" },
@@ -334,8 +334,6 @@ table.insert(plugins, {
   dependencies = { "saghen/blink.cmp" }
 })
 
-vim.lsp.enable({ "lua_ls", "bashls", "clangd", "marksman", "rust_analyzer" })
-
 vim.lsp.config("lua_ls", {
   settings = {
     Lua = {
@@ -343,6 +341,14 @@ vim.lsp.config("lua_ls", {
     }
   }
 })
+
+vim.lsp.config("qs-ls", {
+  cmd = { "qml-language-server" },
+  filetypes = { "qml" },
+  root_markers = { { "qmldir", "shell.qml" }, ".git" },
+})
+
+vim.lsp.enable("qs-ls")
 
 
 --===========================================================================--
@@ -358,6 +364,19 @@ table.insert(plugins, {
       ui = { border = "single" }
     })
   end
+})
+
+table.insert(plugins, {
+  "mason-org/mason-lspconfig.nvim",
+  opts = {
+    ensure_installed = {
+      "lua_ls", "bashls", "marksman", "texlab"
+    }
+  },
+  dependencies = {
+    { "mason-org/mason.nvim", opts = {} },
+    "neovim/nvim-lspconfig",
+  },
 })
 
 
@@ -452,8 +471,8 @@ table.insert(plugins, {
         enforce_regular_tabs = true,
       }
     }
-    
-    vim.api.nvim_set_hl(0, "BufferLineFill", { bg = "#08080c"} )
+
+    vim.api.nvim_set_hl(0, "BufferLineFill", { bg = "#08080c" })
     --
     -- vim.api.nvim_set_hl(0, "BufferLineBufferSelected", { fg = "#282828", bg = "#a89984" } )
     -- vim.api.nvim_set_hl(0, "BufferLineModifiedSelected", { fg = "#282828", bg = "#a89984" } )
@@ -603,6 +622,48 @@ table.insert(plugins, {
       },
     })
   end
+})
+
+
+--===========================================================================--
+-- VimTex
+
+table.insert(plugins, {
+  "lervag/vimtex",
+  lazy = false,
+  init = function()
+    vim.g.vimtex_view_general_viewer = "okular"
+  end
+})
+
+--===========================================================================--
+-- WhichKey
+
+table.insert(plugins, {
+  "folke/which-key.nvim",
+  event = "VeryLazy",
+  opts = {
+    preset = "helix",
+    plugins = {
+      spelling = { enabled = false },
+    },
+    win = {
+      border = "single",
+    },
+    icons = {
+      separator = "-",
+      mappings = false,
+    },
+  },
+  keys = {
+    {
+      "<leader>?",
+      function()
+        require("which-key").show({ global = false })
+      end,
+      desc = "Buffer Local Keymaps (which-key)",
+    },
+  },
 })
 
 
