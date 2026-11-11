@@ -53,10 +53,10 @@ plugins=(
 )
 
 # Binds
-bindkey -rp ''
+# bindkey -rp ''
 
 ZSH_AUTOSUGGEST_STRATEGY=(history completion)
 
 # Sources
-source "$HOME/.cargo/env"   # Rust
+# source "$HOME/.cargo/env"   # Rust
 source "$ZSH/oh-my-zsh.sh"  # Oh My Zsh (Default)

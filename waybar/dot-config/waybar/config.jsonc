@@ -1,0 +1,165 @@
+{
+    //=======================================================================//
+    // General
+    //=======================================================================//
+
+    "layer": "top",
+    "position": "top",
+    "height": 32,
+    "spacing": 0,
+    "mode": "dock",
+
+    "modules-left": [
+        "niri/workspaces"
+    ],
+    "modules-center": [ ],
+    "modules-right": [
+        "tray",
+        "custom/separator",
+        "network",
+        "custom/separator",
+        "group/pulseaudio",
+        "custom/separator",
+        "clock",
+        "custom/separator",
+        "custom/power"
+    ],
+
+    //=======================================================================//
+    // Modules
+    //=======================================================================//
+    
+    // Workspaces
+
+    "niri/workspaces": {
+        "format": "{index}",
+        "hide-empty": true,
+        "cursor": true
+    },
+    
+
+    // Clock
+    
+    "clock": {
+        "format": "<span color='#383840'>TIM</span> {:%H:%M}",
+        "min-length": 9,
+        "max-length": 9,
+        "tooltip-format": "{calendar}",
+        "calendar": {
+            "mode": "month",
+            "mode-mon-col": 3,
+            "format": {
+                "months": "<span alpha='100%'><b>{}</b></span>",
+                "days": "<span alpha='90%'>{}</span>",
+                "weekdays": "<span alpha='80%'>{}</span>",
+                "today": "<span alpha='100%' color='#383840'><b>{}</b></span>"
+            }
+        },
+        "actions": {
+            "on-click": "mode"
+        },
+        "cursor": true
+    },
+
+
+    // Network
+    //
+    // For icons: font='18' rise='-2400'
+    // "󰤯" "󰤮"
+
+    "network": {
+        "interval": 10,
+        "format-ethernet": "<span color='#383840'>ETH</span>",
+        "format-wifi": "<span color='#383840'>NET</span> {signalStrength}%",
+        "format-disconnected": "<span color='#383840'>NET</span> null",
+        "format-disabled": "<span color='#383840'>NET</span> disc",
+        "format-icons": [
+            "󰤟", "󰤢", "󰤥", "󰤨"
+        ],
+        "min-length": 7,
+        "max-length": 7,
+        "tooltip-format": "<b>Gateway</b>: {gwaddr}",
+        "tooltip-format-ethernet": "<b>Interface</b>: {ifname}",
+        "tooltip-format-wifi": "<b>Network</b>: {essid}\n<b>IP Addr</b>: {ipaddr}/{cidr}\n<b>Strength</b>: {signalStrength}%\n<b>Frequency</b>: {frequency} GHz",
+        "tooltip-format-disconnected": "Wi-Fi Disconnected",
+        "tooltip-format-disabled": "Wi-Fi Disabled",
+        "cursor": true
+    },
+
+
+    // Audio
+    //
+    // For icons: font='14' rise='-400'
+    //  font='18' rise='-2600'
+
+    "group/pulseaudio": {
+      "orientation": "horizontal",
+        "modules": [
+          "pulseaudio#output",
+          "pulseaudio#input"
+         ]
+    },
+
+    "pulseaudio#output": {
+        "format": "<span color='#383840'>VOL</span> {volume}%",
+        "format-muted": "<span color='#383840'>VOL</span> mut",
+        "format-icons": {
+            "default": [ "󰕿", "󰖀", "󰕾" ],
+            "default-muted": "󰝟",
+            "headphone": "󰋋",
+            "headphone-muted": "󰟎",
+            "headset": "󰋎",
+            "headset-muted": "󰋐"
+        },
+        "min-length": 8,
+        "max-length": 8,
+        "on-click": "~/.local/bin/volume.sh output mute",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.local/bin/volume.sh output raise",
+        "on-scroll-down": "~/.local/bin/volume.sh output lower",
+        "tooltip-format": "<b>Output Device</b>: {desc}",
+        "cursor": true
+    },
+
+    "tray": {
+      "icon-size": 14,
+      "spacing": 8
+    },
+
+    //  font='12' rise='240'
+    //  font='16' rise='-1800'
+
+    "pulseaudio#input": {
+        "format": "{format_source}",
+        "format-source": "<span color='#383840'>MIC</span> {volume}%",
+        "format-source-muted": "<span color='#383840'>MIC</span> mut",
+        "min-length": 8,
+        "max-length": 8,
+        "on-click": "~/.local/bin/volume.sh input mute",
+        "on-click-right": "pavucontrol",
+        "on-scroll-up": "~/.local/bin/volume.sh input raise",
+        "on-scroll-down": "~/.local/bin/volume.sh input lower",
+        "tooltip-format": "<b>Input Device</b>: {desc}",
+        "cursor": true
+    },
+
+
+    // Power menu
+    //
+    // font='18' rise='800'
+    
+    "custom/power": {
+        "format": "<span>PWR</span>",
+        "on-click": "~/.config/rofi/scripts/pmenu.sh",
+        "tooltip-format": "Power menu...",
+        "cursor": true
+    },
+
+
+    // Separator
+
+    "custom/separator": {
+        "format": "|",
+        "tooltip": false,
+    }
+}

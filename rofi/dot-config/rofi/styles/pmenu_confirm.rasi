@@ -1,7 +1,7 @@
-@import "../theme.rasi"
+@import "../color_scheme.rasi"
 
 * {
-    font: "Iosevkust NF SemiBold 13";
+    font: "Iosevkust NFM Regular 13";
 }
 
 configuration {
@@ -10,8 +10,10 @@ configuration {
 
 window {
     width: 184px;
-    height: 146px;
-    background-color: @crust;
+    height: 148px;
+    background-color: @bg;
+    border: 1px;
+    border-color: @red;
 }
 
 mainbox {
@@ -22,23 +24,23 @@ mainbox {
 }
 
 inputbar {
-    background-color: @mantle;
+    background-color: @float-bg;
     children: [ "textbox-prompt-colon", "prompt"];
 }
 
 textbox-prompt-colon {
     expand: false;
     padding: 9px 15px;
-    str: "";
-    background-color: @base;
-    text-color: @overlay0;
+    str: "❯";
+    background-color: @float-bg;
+    text-color: @bright;
 }
 
 prompt {
     background-color: inherit;
     vertical-align: 0.5;
-    padding: 9px 0px 9px 16px;
-    text-color: @text;
+    padding: 9px 0px;
+    text-color: @fg;
 }
 
 listview {
@@ -51,8 +53,8 @@ listview {
 }
 
 element {
-    background-color: @mantle;
-    text-color: @overlay0;
+    background-color: @float-bg;
+    text-color: @dim;
     padding: 18px 0px 19px 0px;
     cursor: pointer;
 }
@@ -66,5 +68,5 @@ element-text {
 }
 
 element selected.normal {
-    text-color: @text;
+    text-color: @red;
 }
