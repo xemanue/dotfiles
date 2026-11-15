@@ -1,0 +1,8 @@
+[theme.templates.user.neovim]
+input_path = "$XDG_CONFIG_HOME/noctalia/templates/neovim/matugen-template.lua"
+output_path = "$XDG_CONFIG_HOME/nvim/lua/matugen.lua"
+post_hook = "$XDG_CONFIG_HOME/noctalia/templates/neovim/apply.sh"
+
+[theme.templates.user.wlr-which-key]
+input_path = "$XDG_CONFIG_HOME/noctalia/templates/wlr-which-key/matugen-template.yaml"
+output_path = "$XDG_CONFIG_HOME/wlr-which-key/matugen.yaml"

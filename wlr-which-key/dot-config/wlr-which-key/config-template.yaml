@@ -1,0 +1,32 @@
+# Theming
+font: Iosevkust NFM 11
+separator: " - "
+border_width: 1
+corner_r: 0
+padding: 8 # Defaults to corner_r
+
+# Anchor and margin
+anchor: top-right # One of center, left, right, top, bottom, bottom-left, top-left, etc.
+# Only relevant when anchor is not center
+margin_right: 8
+margin_top: 8
+
+menu:
+  - key: "space"
+    desc: Control Center
+    cmd: noctalia msg panel-toggle control-center home
+  - key: "m"
+    desc: Media
+    cmd: noctalia msg panel-toggle control-center media
+  - key: "c"
+    desc: Calendar
+    cmd: noctalia msg panel-toggle control-center calendar
+  - key: "v"
+    desc: Clipboard
+    cmd: noctalia msg panel-toggle clipboard
+  - key: "w"
+    desc: Wallpaper Picker
+    cmd: noctalia msg panel-toggle wallpaper
+  - key: "s"
+    desc: Settings
+    cmd: noctalia msg settings-toggle
