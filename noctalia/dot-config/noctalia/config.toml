@@ -6,3 +6,4 @@ post_hook = "$XDG_CONFIG_HOME/noctalia/templates/neovim/apply.sh"
 [theme.templates.user.wlr-which-key]
 input_path = "$XDG_CONFIG_HOME/noctalia/templates/wlr-which-key/matugen-template.yaml"
 output_path = "$XDG_CONFIG_HOME/wlr-which-key/matugen.yaml"
+post_hook = "$XDG_CONFIG_HOME/noctalia/templates/wlr-which-key/apply.sh"
