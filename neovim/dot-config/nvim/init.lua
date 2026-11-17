@@ -170,17 +170,24 @@ local plugins = {}
 --===========================================================================--
 -- Theme
 
-table.insert(plugins, {
-  dir = "~/repos/x-mfd.nvim",
-  lazy = false,
-  priority = 1000,
-  config = function()
-    require("mfd").setup({
-      no_italic = true,
-      accesibility_contrast = 10
-    })
+-- table.insert(plugins, {
+--   dir = "~/repos/x-mfd.nvim",
+--   lazy = false,
+--   priority = 1000,
+--   config = function()
+--     require("mfd").setup({
+--       no_italic = true,
+--       accesibility_contrast = 10
+--     })
+--
+--     vim.cmd.colorscheme('x-mfd-mono')
+--   end
+-- })
 
-    vim.cmd.colorscheme('x-mfd-mono')
+table.insert(plugins, {
+  "RRethy/base16-nvim",
+  config = function()
+    require("base16-colorscheme").setup()
   end
 })
 

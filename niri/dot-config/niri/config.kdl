@@ -1,7 +1,8 @@
 // █▀▀ ▀▄▀ █▀▀ █▀▀ █▀ //
 // ██▄ █ █ ██▄ █▄▄ ▄█ //
 
-spawn-at-startup "waybar"
+// spawn-at-startup "waybar"
+spawn-at-startup "noctalia"
 spawn-at-startup "awww-daemon"
 spawn-at-startup "/usr/lib/soteria-polkit/soteria"
 
@@ -185,10 +186,10 @@ binds {
     Mod+Shift+Slash { show-hotkey-overlay; }
 
     // Suggested binds for running programs: terminal, app launcher, screen locker.
-    Mod+Return hotkey-overlay-title="Open WezTerm" { spawn "wezterm"; }
+    Mod+Return hotkey-overlay-title="Open Kitty" { spawn "kitty"; }
 
-    Mod+D hotkey-overlay-title="Open Rofi" {
-        spawn-sh "rofi -show drun -config '.config/rofi/config.rasi' -theme '.config/rofi/styles/dmenu.rasi'";
+    Mod+D hotkey-overlay-title="Open Launcher" {
+        spawn-sh "noctalia msg panel-toggle launcher";
     }
 
     // Keyboard volume control
@@ -248,15 +249,17 @@ binds {
     Mod+Shift+Minus { set-window-height "-10%"; }
     Mod+Shift+Equal { set-window-height "+10%"; }
 
-    Mod+Shift+Space { toggle-window-floating; }
-    Mod+Space { switch-focus-between-floating-and-tiling; }
+    // Mod+Shift+Space { toggle-window-floating; }
+    // Mod+Space { switch-focus-between-floating-and-tiling; }
+
+    Mod+Space { spawn-sh "noctalia msg panel-toggle control-center home"; }
 
     Mod+W { toggle-column-tabbed-display; }
 
     Mod+S { screenshot; }
 
-    Mod+Escape hotkey-overlay-title="Open Power menu" {
-        spawn-sh "./.config/rofi/scripts/pmenu.sh";
+    Mod+Escape hotkey-overlay-title="Open session menu" {
+        spawn-sh "noctalia msg panel-toggle session";
     }
 
     Mod+Shift+Escape allow-inhibiting=false {
@@ -265,3 +268,5 @@ binds {
 
     Mod+F1 { power-off-monitors; }
 }
+
+include "noctalia.kdl"
